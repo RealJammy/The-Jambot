@@ -15,6 +15,7 @@ The avaliable commands for a regular user are:
 - lyne
 - ping
 - github
+- noleek
 
 The available commands for anyone with Administrator perms are:
 
@@ -25,6 +26,7 @@ The available commands for anyone with Administrator perms are:
 - kick
 - ban
 - github
+- noleek
 <hr>
 
 ## Usage of the code:
@@ -43,3 +45,10 @@ python3 -m pip install discord.py
 
 If you have any feedback about the bot, please get in contact with me on twitter (https://twitter.com/CaptureTheJam).
 
+<hr>
+
+## Contributors:
+
+If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work <3.
+
+- willwam845 (https://github.com/willwam845)
