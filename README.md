@@ -11,7 +11,7 @@ Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?
 The prefix for the bot is `.`
 The avaliable commands for a regular user are:
 
-- anime
+- noanime
 - lyne
 - ping
 - github
@@ -19,7 +19,7 @@ The avaliable commands for a regular user are:
 
 The available commands for anyone with Administrator perms are:
 
-- anime
+- noanime
 - lyne
 - ping
 - byebye (acts as a purge)
