@@ -24,7 +24,7 @@ The available commands for anyone with Administrator perms are:
 - byebye (acts as a purge)
 - kick
 - ban
-
+- github
 <hr>
 
 ## Usage of the code:
