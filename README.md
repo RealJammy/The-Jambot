@@ -15,6 +15,7 @@ The avaliable commands for a regular user are:
 - lyne
 - ping
 - github
+
 The available commands for anyone with Administrator perms are:
 
 - anime
