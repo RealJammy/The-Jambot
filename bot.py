@@ -1,4 +1,5 @@
 import discord
+
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '.')
@@ -28,19 +29,26 @@ async def ping(ctx):
 async def lyne(ctx):
   await ctx.send('http://www.risk-uk.com/wp-content/uploads/2015/04/JamesLyneSANSCyberAcademy1.png')
 
+@client.command()
+async def github(ctx):
+  await ctx.send('https://github.com/RealJammy/The-Jambot/blob/master/README.md')
+
 
 
 @client.command()
 @commands.has_permissions(administrator=True)
 async def byebye(ctx, amount=5):
-  await ctx.channel.purge(limit=amount)                                                                                                                                                                                                    
-                                                                                                                                                                                                                                           
-@client.command()                                                                                                                                                                                                                          
-@commands.has_permissions(administrator=True)                                                                                                                                                                                              
-async def kick(ctx, member : discord.Member, *, reason=None):                                                                                                                                                                              
-  await member.kick(reason=reason)                                                                                                                                                                                                         
-                                                                                                                                                                                                                                           
-@client.command()                                                                                                                                                                                                                          
-@commands.has_permissions(administrator=True)                                                                                                                                                                                              
-async def ban(ctx, member : discord.Member, *, reason=None):                                                                                                                                                                               
+  await ctx.channel.purge(limit=amount)
+
+@client.command()
+@commands.has_permissions(administrator=True)
+async def kick(ctx, member : discord.Member, *, reason=None):
+  await member.kick(reason=reason)
+
+@client.command()
+@commands.has_permissions(administrator=True)
+async def ban(ctx, member : discord.Member, *, reason=None):
   await member.ban(reason=reason) 
+
+
+client.run('[put your bot token in here lads]')
