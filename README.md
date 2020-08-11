@@ -8,7 +8,7 @@ Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?
 <hr>
 
 ## Notes:
-
+The prefix for the bot is `.`
 The avaliable commands for a regular user are:
 
 - anime
