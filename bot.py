@@ -33,8 +33,10 @@ async def lyne(ctx):
 async def github(ctx):
   await ctx.send('https://github.com/RealJammy/The-Jambot/blob/master/README.md')
 
-
-
+@client.command()
+async def noleek(ctx):
+  await ctx.send('https://game.joincyberdiscovery.com/assets/videos/cheating_message.mp4?version=4.2.0')
+                 
 @client.command()
 @commands.has_permissions(administrator=True)
 async def byebye(ctx, amount=5):
