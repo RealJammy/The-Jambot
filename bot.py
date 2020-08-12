@@ -64,4 +64,4 @@ async def ban(ctx, member : discord.Member, *, reason=None):
   await member.ban(reason=reason) 
 
 
-client.run('[put your bot token in ere innit')
+client.run('[put your bot token in ere innit]')
