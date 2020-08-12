@@ -67,7 +67,7 @@ async def ban(ctx, member : discord.Member, *, reason=None):
 @client.command()
 @commands.has_permissions(administrator=True)
 async def gotosleep(ctx, role_id: int = 736248018139086911):
-  awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot]
+  awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot and not member.display_name == "JSnerd#6087]
   text = ''.join(f'<@{member.id}> ' for member in awake) + "GO TO SLEEP"
   await ctx.send(text)
 
