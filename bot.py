@@ -63,5 +63,12 @@ async def kick(ctx, member : discord.Member, *, reason=None):
 async def ban(ctx, member : discord.Member, *, reason=None):
   await member.ban(reason=reason) 
 
-
+@client.command()
+@commands.has_permissions(administrator=True)
+async def gotosleep(ctx, role_id: 736248018139086911):
+  awake = [member.id for member in ctx.guild.get_role(role_id).members if member.status != Status.offline]
+  text = f'{["<@"+id+">" for id in awake].join()} GO TO SLEEP'
+  await ctx.send(text)
+  
+ 
 client.run('[put your bot token in ere innit]')
