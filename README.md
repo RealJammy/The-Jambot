@@ -54,5 +54,6 @@ If you make a change to the bot that ends up in its main code, you will be liste
 
 - willwam845 (https://github.com/willwam845)
 - potato-jackson (https://github.com/potato-jackson)
-- squishie (https://github.com/squishieishi)
+- squishieishi (https://github.com/squishieishi)
 - Day91 (https://github.com/Day91)
+- Mystrite (https://github.com/Mystrite)
