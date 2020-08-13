@@ -57,3 +57,4 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - squishieishi (https://github.com/squishieishi)
 - Day91 (https://github.com/Day91)
 - Mystrite (https://github.com/Mystrite)
+- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
