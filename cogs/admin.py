@@ -1,5 +1,6 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
+import schedule, time #to be used for the last function in here (probably, i think)
 
 class admin(commands.Cog):
 
@@ -43,7 +44,7 @@ class admin(commands.Cog):
     await member.kick(reason=reason)
     await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been kicked :pensive:")
 
-    @commands.command()
+    @commands.command(brief='Bans users.', description='Do ".ban @user".')
     @commands.has_permissions(administrator=True)
     async def ban(self, ctx, member:discord.Member, *, reason=None):
         user = await commands.get_user_info(member.ID)
@@ -58,6 +59,8 @@ class admin(commands.Cog):
     #     awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot]
     #     text = ''.join(f'<@{member.id}> ' for member in awake) + "GO TO SLEEP"
     #     await ctx.send(text)
+
+    #add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
 
 def setup(client):
     client.add_cog(admin(client))
