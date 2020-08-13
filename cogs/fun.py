@@ -34,6 +34,12 @@ class fun(commands.Cog):
     @commands.command(brief='No leaking!!!')
     async def noleek(self, ctx):
         await ctx.send('https://game.joincyberdiscovery.com/assets/videos/cheating_message.mp4?version=4.2.0')
+        
+    @commands.command(brief='uwu')
+    async def uwu(self, ctx):
+        await ctx.send('uwu!')
+
+
 
 def setup(client):
     client.add_cog(fun(client))
