@@ -46,6 +46,11 @@ class fun(commands.Cog):
     @commands.command(brief='Red Panda (awwww look how cute it is)')
     async def panda(self, ctx):
         await ctx.send('https://pbs.twimg.com/media/ELjqorWUEAEwuPc?format=jpg&name=small')
+    
+    
+    @commands.command(brief='ping pig')
+    async def pingpig(self, ctx):
+        await ctx.send('<@295440396006326272>')
 
 
 def setup(client):
