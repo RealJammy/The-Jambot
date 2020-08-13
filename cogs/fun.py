@@ -19,9 +19,10 @@ class fun(commands.Cog):
     async def noanime(self, ctx):
         await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg')
     
-    @commands.command(brief='Ping!')
+   @commands.command(brief='Ping!')
     async def ping(self, ctx):
-        await ctx.send(f'Pong! {round(commands.latency * 1000)}ms')
+        await ctx.send(f'pong!\n{round(self.client.latency * 1000)}ms')
+
 
     @commands.command(brief='Lyne.')
     async def lyne(self, ctx):
@@ -49,9 +50,17 @@ class fun(commands.Cog):
     
     
     @commands.command(brief='ping pig')
-    async def pingpig(self, ctx):
-        await ctx.send('<@295440396006326272>')
+    async def pingpig(self, ctx, amount=1):
+      message = await ctx.send('<@295440396006326272>')
+      await ctx.channel.purge(limit=amount+1)
 
+    @commands.command(brief='Slough Song')
+    async def slough(self, ctx):
+        await ctx.send('https://www.youtube.com/watch?v=nwMK2ywRF78')
+            
+    @commands.command(brief='to nag rag')
+    async def nagrag(self, ctx):
+        await ctx.send('Hey <@624713824087572480> this is a nag')
 
 def setup(client):
     client.add_cog(fun(client))
