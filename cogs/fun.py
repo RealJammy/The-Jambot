@@ -39,7 +39,9 @@ class fun(commands.Cog):
     async def uwu(self, ctx):
         await ctx.send('uwu!')
 
-
+    @commands.command(brief='scream! Only works on PC/ Desktop.')
+    async def scream(self, ctx):
+        await ctx.send('/tts  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
 def setup(client):
     client.add_cog(fun(client))
