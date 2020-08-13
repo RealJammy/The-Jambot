@@ -34,7 +34,7 @@ The available commands for anyone with Administrator perms are:
 
 Feel free to use this code to make your own discord bot, as long as you credit me.
 
-Also when putting reusing this code, make sure to run:
+Also when reusing this code, make sure to run:
 
 ```
 python3 -m pip install discord.py
@@ -54,4 +54,7 @@ If you make a change to the bot that ends up in its main code, you will be liste
 
 - willwam845 (https://github.com/willwam845)
 - potato-jackson (https://github.com/potato-jackson)
-- squishie (https://github.com/squishieishi)
+- squishieishi (https://github.com/squishieishi)
+- Day91 (https://github.com/Day91)
+- Mystrite (https://github.com/Mystrite)
+- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
