@@ -1,5 +1,5 @@
-# The-Jambot
-A repo for my  bot!
+# The Jambot
+The Jambot is a fun, interactive and easy to use discord bot created by me, Jammy. There are many commands the bot is able to execute, from quick, useful commands such as purging to fun commands such as displaying anime (or no anime!).
 
 
 Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot
@@ -28,6 +28,8 @@ The available commands for anyone with Administrator perms are:
 - ban
 - github
 - noleek
+
+e.g. the command `.byebye 2`, when used by a server admin, will purge the most recent two messages. 
 <hr>
 
 ## Usage of the code:
