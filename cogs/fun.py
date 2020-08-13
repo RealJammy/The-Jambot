@@ -51,8 +51,8 @@ class fun(commands.Cog):
     
     @commands.command(brief='ping pig')
     async def pingpig(self, ctx, amount=1):
-      await(await ctx.send('<@295440396006326272>')).delete(delay=0.5)
-      await client.delete_message(ctx.message)
+      message = await ctx.send('<@295440396006326272>')
+      await ctx.channel.purge(limit=amount+1)
  
 
     @commands.command(brief='Slough Song')
