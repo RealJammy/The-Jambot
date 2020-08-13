@@ -61,3 +61,4 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - Day91 (https://github.com/Day91)
 - Mystrite (https://github.com/Mystrite)
 - speccy (https://specatron111.github.io/)
+- Das12 (https://github.com/das-12)
