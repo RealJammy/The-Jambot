@@ -52,9 +52,9 @@ If you have any feedback about the bot, please get in contact with me on twitter
 
 If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work <3.
 
+- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
 - willwam845 (https://github.com/willwam845)
 - potato-jackson (https://github.com/potato-jackson)
 - squishieishi (https://github.com/squishieishi)
 - Day91 (https://github.com/Day91)
 - Mystrite (https://github.com/Mystrite)
-- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
