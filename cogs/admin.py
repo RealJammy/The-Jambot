@@ -16,12 +16,12 @@ class admin(commands.Cog):
     @commands.Cog.listener()
     async def on_member_join(self, member): #also check if this works lol- will run one big test at the end probably
         channel = discord.utils.get(message.guild.channels, name='general')
-        await channel.send(f'{member} has joined the server.')
+        await channel.send(f'{member} has joined the server. :smile:')
 
     @commands.Cog.listener()
     async def on_member_remove(self, member): #should probably stop putting a note to check at every function lmao
         channel = discord.utils.get(message.guild.channels, name='general')
-        await channel.send(f'{member} has left the server.')
+        await channel.send(f'{member} has left the server. :pensive:')
     
     @commands.Cog.listener()
     async def on_commmand_error(self, ctx, error): 
@@ -38,10 +38,26 @@ class admin(commands.Cog):
 
     @commands.command(brief='Kicks users.', description='Do ".kick @user".')
     @commands.has_permissions(administrator=True)
-    async def kick(self, ctx, member : discord.Member, *, reason=None):
+    async def kick(self, ctx, member:discord.Member, *, reason=None):
     user = await commands.get_user_info(member.ID) #not 100% sure this works
     await member.kick(reason=reason)
-    await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been kicked :/")
+    await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been kicked :pensive:")
+
+    @commands.command()
+    @commands.has_permissions(administrator=True)
+    async def ban(self, ctx, member:discord.Member, *, reason=None):
+        user = await commands.get_user_info(member.ID)
+        await member.ban(reason=reason)
+        await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been banned :pensive:")
+
+    # USING AUTOMATED VERSION INSTEAD- JAMMY JUST SAY IF YOU WANT THIS TOO
+    #
+    # @commands.command()
+    # @commands.has_permissions(administrator=True)
+    # async def gotosleep(self, ctx, role_id: int = 736248018139086911):
+    #     awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot]
+    #     text = ''.join(f'<@{member.id}> ' for member in awake) + "GO TO SLEEP"
+    #     await ctx.send(text)
 
 def setup(client):
     client.add_cog(admin(client))
