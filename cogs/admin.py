@@ -52,16 +52,16 @@ class admin(commands.Cog):
         await member.ban(reason=reason)
         await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been banned :pensive:")
 
-    # USING AUTOMATED VERSION INSTEAD- JAMMY JUST SAY IF YOU WANT THIS TOO
-    #
-    # @commands.command()
-    # @commands.has_permissions(administrator=True)
-    # async def gotosleep(self, ctx, role_id: int = 736248018139086911):
-    #     awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot]
-    #     text = ''.join(f'<@{member.id}> ' for member in awake) + "GO TO SLEEP"
-    #     await ctx.send(text)
+   # USING AUTOMATED VERSION INSTEAD- JAMMY JUST SAY IF YOU WANT THIS TOO
+    
+    @commands.command()
+    @commands.has_permissions(administrator=True)
+    async def gotosleep(self, ctx, role_id: int = 736248018139086911):
+        awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot]
+        text = ''.join(f'<@{member.id}> ' for member in awake) + "GO TO SLEEP"
+        await ctx.send(text)
 
-    #add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
+   # add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
 
 def setup(client):
     client.add_cog(admin(client))
