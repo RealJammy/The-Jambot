@@ -42,6 +42,11 @@ class fun(commands.Cog):
     @commands.command(brief='scream! Only works on PC/ Desktop.')
     async def scream(self, ctx):
         await ctx.send('/tts  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+        
+    @commands.command(brief='Red Panda (awwww look how cute it is)')
+    async def panda(self, ctx):
+        await ctx.send('https://pbs.twimg.com/media/ELjqorWUEAEwuPc?format=jpg&name=small')
+
 
 def setup(client):
     client.add_cog(fun(client))
