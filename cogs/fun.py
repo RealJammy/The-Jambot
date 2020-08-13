@@ -21,7 +21,7 @@ class fun(commands.Cog):
     
     @commands.command(brief='Ping!')
     async def ping(self, ctx):
-        await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+        await ctx.send(f'Pong! {round(commands.latency * 1000)}ms')
 
     @commands.command(brief='Lyne.')
     async def lyne(self, ctx):
