@@ -62,3 +62,4 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - Mystrite (https://github.com/Mystrite)
 - speccy (https://specatron111.github.io/)
 - Das12 (https://github.com/das-12)
+- Pig/ James H (https://github.com/James-261)
