@@ -42,7 +42,7 @@ class fun(commands.Cog):
 
     @commands.command(brief='scream! Only works on PC/ Desktop.')
     async def scream(self, ctx):
-        await ctx.send('/tts  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+        await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', tts=True)
         
     @commands.command(brief='Red Panda (awwww look how cute it is)')
     async def panda(self, ctx):
