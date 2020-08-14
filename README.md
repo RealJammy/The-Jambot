@@ -17,17 +17,16 @@ The avaliable commands for a regular user are:
 - ping
 - github
 - noleek
+- scream
+- pingpig
+- nagrag
+- invite
 
-The available commands for anyone with Administrator perms are:
-- anime
-- noanime
-- lyne
-- ping
-- byebye (acts as a purge)
+The available commands for anyone with Administrator perms are those listed above and:
+
 - kick
 - ban
-- github
-- noleek
+- byebye( acts as a purge)
 
 e.g. the command `.byebye 2`, when used by a server admin, will purge the most recent two messages. 
 <hr>
