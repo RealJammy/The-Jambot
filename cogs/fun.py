@@ -79,6 +79,11 @@ class fun(commands.Cog):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@386245767725056015> get some sleep', tts=True)
         user = 386245767725056015
         await commands.send_message(user, "fucking sleep ben ffs")
+    
+    @commands.command(brief='secret :')
+    async def secret(self, *, ctx, message):
+        await ctx.message.delete()
+        await ctx.send(message)
 
 def setup(client):
     client.add_cog(fun(client))
