@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands, tasks
 import random
+import requests
+import json
 
 class fun(commands.Cog):
 
@@ -13,6 +15,13 @@ class fun(commands.Cog):
     async def anime(self, ctx):
         image = discord.Embed()
         image.set_image(url=f'https://www.thiswaifudoesnotexist.net/example-{random.randint(0, 100000)}.jpg')
+        await ctx.send(embed=image)
+        
+    @commands.command(brief='Random meme.')
+    async def meme(self, ctx):
+        image = discord.Embed()
+        imageUrl = json.loads(requests.get('https://some-random-api.ml/meme').text)['image']
+        image.set_image(url=imageUrl)
         await ctx.send(embed=image)
 
     @commands.command(brief='No anime.')
