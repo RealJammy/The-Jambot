@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands, tasks
 import random
+import requests
+import json
 
 class fun(commands.Cog):
 
@@ -53,6 +55,16 @@ class fun(commands.Cog):
     async def pingpig(self, ctx, amount=1):
       message = await ctx.send('<@295440396006326272>')
       await ctx.channel.purge(limit=amount+1)
+     
+    @commands.command(brief='Random meme.')
+    async def meme(self, ctx):
+        try:
+            image = discord.Embed()
+            imageUrl = json.loads(requests.get('https://some-random-api.ml/meme').text)['image']
+            image.set_image(url=imageUrl)
+            await ctx.send(embed=image)
+        except:
+            await ctx.send("Meme failed :( [peeball]")
  
 
     @commands.command(brief='Slough Song')
