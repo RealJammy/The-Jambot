@@ -63,11 +63,13 @@ class fun(commands.Cog):
     async def nagrag(self, ctx):
         await ctx.send('Hey <@624713824087572480> this is a nag')
         
-    @commands.command(brief='To force JSnerd to get some sleep')
+    @tasks.loop(seconds=10, brief='To force JSnerd to get some sleep')
     async def jsnerd(self, ctx):
-        await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@386245767725056015> get some sleep', tts=True)
         user = 386245767725056015
+        await ctx.send(f'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@{user}> get some sleep', tts=True)
         await commands.send_message(user, "fucking sleep ben ffs")
+        channel = client.get_channel(CHANNEL_ID)
+        await channel.send("jsnerd")
 
 def setup(client):
     client.add_cog(fun(client))
