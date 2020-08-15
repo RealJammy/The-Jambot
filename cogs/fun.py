@@ -17,8 +17,7 @@ class fun(commands.Cog):
         image = discord.Embed()
         image.set_image(url=f'https://www.thiswaifudoesnotexist.net/example-{random.randint(0, 100000)}.jpg')
         await ctx.send(embed=image)
-        
-        
+         
     @commands.command(brief='Random meme.')
     async def meme(self, ctx):
         try:
@@ -36,7 +35,6 @@ class fun(commands.Cog):
    @commands.command(brief='Ping!')
     async def ping(self, ctx):
         await ctx.send(f'pong!\n{round(self.client.latency * 1000)}ms')
-
 
     @commands.command(brief='Lyne.')
     async def lyne(self, ctx):
@@ -61,14 +59,12 @@ class fun(commands.Cog):
     @commands.command(brief='Red Panda (awwww look how cute it is)')
     async def panda(self, ctx):
         await ctx.send('https://pbs.twimg.com/media/ELjqorWUEAEwuPc?format=jpg&name=small')
-    
-    
+     
     @commands.command(brief='ping pig')
     async def pingpig(self, ctx, amount=1):
       message = await ctx.send('<@295440396006326272>')
       await ctx.channel.purge(limit=amount+1)
  
-
     @commands.command(brief='Slough Song')
     async def slough(self, ctx):
         await ctx.send('https://www.youtube.com/watch?v=nwMK2ywRF78')
