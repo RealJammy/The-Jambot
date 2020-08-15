@@ -89,10 +89,9 @@ class fun(commands.Cog):
         await ctx.send(message)
         
     @commands.command(brief='Decode a number to bytes')
-    @commands.has_permissions(administrator=True)
     async def lb(self,ctx, *args):
         if len(args) > 0:
-            await ctx.send(long_to_bytes(int(args[0])).decode())
+            await ctx.send(long_to_bytes(int(args[0])).decode().replace("@",""))
 
 
 def setup(client):
