@@ -1,5 +1,5 @@
-# The-Jambot
-A repo for my discord bot!
+# The Jambot
+The Jambot is a fun, interactive and easy to use discord bot created by me, Jammy. There are many commands the bot is able to execute, from quick, useful commands such as purging to fun commands such as displaying anime (or no anime!).
 
 
 Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot
@@ -17,17 +17,18 @@ The avaliable commands for a regular user are:
 - ping
 - github
 - noleek
+- scream
+- pingpig
+- nagrag
+- invite
 
-The available commands for anyone with Administrator perms are:
-- anime
-- noanime
-- lyne
-- ping
-- byebye (acts as a purge)
+The available commands for anyone with Administrator perms are those listed above and:
+
 - kick
 - ban
-- github
-- noleek
+- byebye( acts as a purge)
+
+e.g. the command `.byebye 2`, when used by a server admin, will purge the most recent two messages. 
 <hr>
 
 ## Usage of the code:
@@ -52,9 +53,12 @@ If you have any feedback about the bot, please get in contact with me on twitter
 
 If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work <3.
 
+- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
 - willwam845 (https://github.com/willwam845)
 - potato-jackson (https://github.com/potato-jackson)
 - squishieishi (https://github.com/squishieishi)
 - Day91 (https://github.com/Day91)
 - Mystrite (https://github.com/Mystrite)
-- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
+- speccy (https://specatron111.github.io/)
+- Das12 (https://github.com/das-12)
+- Pig/ James H (https://github.com/James-261)
