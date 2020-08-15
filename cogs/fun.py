@@ -14,7 +14,18 @@ class fun(commands.Cog):
         image = discord.Embed()
         image.set_image(url=f'https://www.thiswaifudoesnotexist.net/example-{random.randint(0, 100000)}.jpg')
         await ctx.send(embed=image)
-
+        
+        
+    @commands.command(brief='Random meme.')
+    async def meme(self, ctx):
+        try:
+            image = discord.Embed()
+            imageUrl = json.loads(requests.get('https://some-random-api.ml/meme').text)['image']
+            image.set_image(url=imageUrl)
+            await ctx.send(embed=image)
+        except:
+            await ctx.send("Meme failed :( [peeball]")
+     
     @commands.command(brief='No anime.')
     async def noanime(self, ctx):
         await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg')
