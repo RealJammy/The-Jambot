@@ -18,4 +18,4 @@ async def reload(ctx, extension):
 client.load_extension('cogs.fun')
 client.load_extension('cogs.admin')
 
-client.run('NzQ0MzEyODA0OTY1ODc1OTA1.XzhZUQ.hyg8Ey3BUfRDquQ4EjPCh0H9yoE')#api key here :)
+client.run('api')#api key here :)
