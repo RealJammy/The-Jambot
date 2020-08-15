@@ -90,8 +90,11 @@ class fun(commands.Cog):
         
     @commands.command(brief='Decode a number to bytes')
     async def lb(self,ctx, *args):
-        if len(args) > 0:
-            await ctx.send(long_to_bytes(int(args[0])).decode().replace("@",""))
+        try:
+            if len(args) > 0:
+                await ctx.send(long_to_bytes(int(args[0])).decode().replace("@",""))
+        except:
+            await ctx.send("Failed <:sex:736200562890113055>")
 
 
 def setup(client):
