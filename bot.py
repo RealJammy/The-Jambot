@@ -8,10 +8,12 @@ client = commands.Bot(command_prefix = '.')
 @client.command(brief = 'Reloads cog.', description = 'Do ";reload cog".')
 @has_permissions(administrator = True)
 async def reload(ctx, extension):
-    client.unload_extension(f'cogs.{extension}')
-    client.load_extension(f'cogs.{extension}')
+    
+    if ctx.message.author.id == 448519423901433876:
+        client.unload_extension(f'cogs.{extension}')
+        client.load_extension(f'cogs.{extension}')
 
-    await ctx.send(f'"{extension}" reloaded')
+        await ctx.send(f'"{extension}" reloaded')
 
 for file in os.listdir('./cogs'):
     if file.endswith('.py'):
