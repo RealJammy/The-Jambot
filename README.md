@@ -53,7 +53,6 @@ If you have any feedback about the bot, please get in contact with me on twitter
 
 If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work <3.
 
-- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
 - willwam845 (https://github.com/willwam845)
 - potato-jackson (https://github.com/potato-jackson)
 - squishieishi (https://github.com/squishieishi)
@@ -62,3 +61,4 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - speccy (https://specatron111.github.io/)
 - Das12 (https://github.com/das-12)
 - Pig/ James H (https://github.com/James-261)
+- TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/), Waffle/Maria (https://github.com/maria-waffle)
