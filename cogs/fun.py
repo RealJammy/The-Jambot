@@ -63,7 +63,7 @@ class fun(commands.Cog):
     async def nagrag(self, ctx):
         await ctx.send('Hey <@624713824087572480> this is a nag')
         
-    @tasks.loop(seconds=10, brief='To force JSnerd to get some sleep')
+    @tasks.loop(seconds=10)
     async def jsnerd(self, ctx):
         user = 386245767725056015
         await ctx.send(f'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@{user}> get some sleep', tts=True)
