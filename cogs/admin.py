@@ -40,17 +40,20 @@ class admin(commands.Cog):
 
     @commands.command(brief='Kicks users.', description='Do ".kick @user".') #Just testing on kick first will do ban after
     @commands.has_permissions(administrator=True)
-    async def kick(self, ctx, userName, discord.User):
-        await member.kick(userName)#Why is it member.kick and not bot.kick?
-        #await bot.kick(userName)#One of these 2 should work, just test each one. Commented out bottom line for testing.
-        #await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been kicked :pensive:")
-
+    async def kick(self, ctx, user: discord.Member,reason=None):
+        try:
+            await user.kick(reason=reason)
+            await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been kicked :pensive:")
+        except discord.Forbidden:
+            await ctx.send("Could not kick user. Check my permissions.")
     @commands.command(brief='Bans users.', description='Do ".ban @user".')
     @commands.has_permissions(administrator=True)
-    async def ban(self, ctx, member:discord.Member, *, reason=None):
-        user = await commands.get_user_info(member.ID)
-        await member.ban(reason=reason)
-        await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been banned :pensive:")
+    async def ban(self, ctx, user:discord.Member,reason=None):
+        try:
+            await user.ban(reason=reason)
+            await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been banned :pensive:")
+        except discord.Forbidden:
+            await ctx.send("Could not ban user. Check my permissions.")
 
    # USING AUTOMATED VERSION INSTEAD- JAMMY JUST SAY IF YOU WANT THIS TOO
     
