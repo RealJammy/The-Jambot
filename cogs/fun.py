@@ -65,8 +65,8 @@ class fun(commands.Cog):
         
     @commands.command(brief='To force JSnerd to get some sleep')
     async def jsnerd(self, ctx):
-        await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@386245767725056015> get some sleep', tts=True)
         user = 386245767725056015
+        await ctx.send(f'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@{user}> get some sleep', tts=True)
         await commands.send_message(user, "fucking sleep ben ffs")
 
 def setup(client):
