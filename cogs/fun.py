@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands, tasks
 import random
+import requests
+import json
+from Crypto.Util.number import long_to_bytes
 
 class fun(commands.Cog):
 
@@ -84,6 +87,13 @@ class fun(commands.Cog):
     async def secret(self, *, ctx, message):
         await ctx.message.delete()
         await ctx.send(message)
+        
+    @commands.command(brief='Decode a number to bytes')
+    @commands.has_permissions(administrator=True)
+    async def lb(self,ctx, *args):
+        if len(args) > 0:
+            await ctx.send(long_to_bytes(int(args[0])).decode())
+
 
 def setup(client):
     client.add_cog(fun(client))
