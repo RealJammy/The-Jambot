@@ -79,10 +79,7 @@ class fun(commands.Cog):
         user = 386245767725056015
         await commands.send_message(user, "fucking sleep ben ffs")
     
-    @commands.command(brief='secret :')
-    async def secret(self, *, ctx, message):
-        await ctx.message.delete()
-        await ctx.send(message)
+    
         
     @commands.command(brief='Decode a number to bytes')
     async def lb(self, ctx, arg):
