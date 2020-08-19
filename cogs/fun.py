@@ -60,7 +60,7 @@ class fun(commands.Cog):
     async def panda(self, ctx):
         try:
             image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/red_panda').text)['message']
+            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/red_panda').text)['link']
             image.set_image(url=imageUrl)
             await ctx.send(embed=image)
         except:
