@@ -56,9 +56,15 @@ class fun(commands.Cog):
     async def scream(self, ctx):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', tts=True)
         
-    @commands.command(brief='Red Panda (awwww look how cute it is)')
+    @commands.command(brief='red panda!')
     async def panda(self, ctx):
-        await ctx.send('https://pbs.twimg.com/media/ELjqorWUEAEwuPc?format=jpg&name=small')
+        try:
+            image = discord.Embed()
+            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/red_panda').text)['message']
+            image.set_image(url=imageUrl)
+            await ctx.send(embed=image)
+        except:
+            await ctx.send("No panda :(")
      
     @commands.command(brief='ping pig')
     async def pingpig(self, ctx, amount=1):
