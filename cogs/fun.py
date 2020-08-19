@@ -79,7 +79,15 @@ class fun(commands.Cog):
         user = 386245767725056015
         await commands.send_message(user, "fucking sleep ben ffs")
     
-    
+    @commands.command(brief='shoob :)')
+    async def shoob(self, ctx):
+        try:
+            image = discord.Embed()
+            imageUrl = json.loads(requests.get('https://dog.ceo/api/breed/samoyed/images/random').text)['message']
+            image.set_image(url=imageUrl)
+            await ctx.send(embed=image)
+        except:
+            await ctx.send("No shoob :(") 
         
 
 
