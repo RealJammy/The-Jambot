@@ -94,7 +94,22 @@ class fun(commands.Cog):
             await ctx.send(embed=image)
         except:
             await ctx.send("No shoob :(") 
-        
+    
+    
+    @commands.command(brief='djungelskog!')
+    async def djungelskog(self, ctx):
+        try:
+            res = requests.get('https://json.reddit.com/r/Djungelskog/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'})
+            data = json.loads(res.text)['data']
+            count = int(data['dist'])
+            post = data['children'][random.randint(1, count)]['data']
+            imageUrl = post['url_overridden_by_dest']
+            title = post['title']
+            image = discord.Embed(title=title)
+            image.set_image(url=imageUrl)
+            await ctx.send(embed=image)
+        except:
+            await ctx.send('No djungelskog :(')
 
 
 def setup(client):
