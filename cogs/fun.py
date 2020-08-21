@@ -32,6 +32,10 @@ class fun(commands.Cog):
     async def noanime(self, ctx):
         await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg')
     
+    @commands.command(brief='random.')
+    async def randomcmd(self, ctx):
+        await ctx.send('https://www.youtube.com/watch?v=63qtYi1nwcs')
+        
     @commands.command(brief='Ping!')
     async def ping(self, ctx):
         await ctx.send(f'pong!\n{round(self.client.latency * 1000)}ms')
