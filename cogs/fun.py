@@ -12,22 +12,9 @@ class fun(commands.Cog):
 
     #FUN
 
-    @commands.command(brief='Random anime.')
-    async def anime(self, ctx):
-        image = discord.Embed()
-        image.set_image(url=f'https://www.thiswaifudoesnotexist.net/example-{random.randint(0, 100000)}.jpg')
-        await ctx.send(embed=image)
+
          
-    @commands.command(brief='Random meme.')
-    async def meme(self, ctx):
-        try:
-            image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://some-random-api.ml/meme').text)['image']
-            image.set_image(url=imageUrl)
-            await ctx.send(embed=image)
-        except:
-            await ctx.send("Meme failed :( [peeball]")
-     
+
     @commands.command(brief='No anime.')
     async def noanime(self, ctx):
         await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg')
@@ -60,16 +47,7 @@ class fun(commands.Cog):
     async def scream(self, ctx):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', tts=True)
         
-    @commands.command(brief='red panda!')
-    async def panda(self, ctx):
-        try:
-            image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/red_panda').text)['link']
-            image.set_image(url=imageUrl)
-            await ctx.send(embed=image)
-        except:
-            await ctx.send("No panda :(")
-     
+ 
     @commands.command(brief='ping pig')
     async def pingpig(self, ctx, amount=1):
       message = await ctx.send('<@295440396006326272>')
@@ -89,31 +67,9 @@ class fun(commands.Cog):
         user = 386245767725056015
         await commands.send_message(user, "fucking sleep ben ffs")
     
-    @commands.command(brief='shoob :)')
-    async def shoob(self, ctx):
-        try:
-            image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://dog.ceo/api/breed/samoyed/images/random').text)['message']
-            image.set_image(url=imageUrl)
-            await ctx.send(embed=image)
-        except:
-            await ctx.send("No shoob :(") 
+
     
-    
-    @commands.command(brief='djungelskog!')
-    async def djungelskog(self, ctx):
-        try:
-            res = requests.get('https://json.reddit.com/r/Djungelskog/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'})
-            data = json.loads(res.text)['data']
-            count = int(data['dist'])
-            post = data['children'][random.randint(1, count)]['data']
-            imageUrl = post['url_overridden_by_dest']
-            title = post['title']
-            image = discord.Embed(title=title)
-            image.set_image(url=imageUrl)
-            await ctx.send(embed=image)
-        except:
-            await ctx.send('No djungelskog :(')
+ 
 
 
 def setup(client):
