@@ -1,9 +1,7 @@
 import discord
-from discord.ext import commands, tasks
+from discord.ext import commands
 import random
-import requests
 import json
-from Crypto.Util.number import long_to_bytes
 
 class fun(commands.Cog):
 

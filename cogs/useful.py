@@ -1,8 +1,5 @@
 import discord
 from discord.ext import commands, tasks
-import random
-import requests
-import json
 from Crypto.Util.number import long_to_bytes
 
 class useful(commands.Cog):
