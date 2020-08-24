@@ -63,3 +63,5 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - Pig/ James H (https://github.com/James-261)
 - TheMonkeyHacker/JamBot3000 (https://github.com/themonkeyhacker/)
 - Waffle/Maria (https://github.com/maria-waffle)
+- ben-sommer (https://github.com/ben-sommer)
+- rag7 (https://github.com/rag7)
