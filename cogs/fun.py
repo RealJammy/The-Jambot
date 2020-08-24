@@ -3,12 +3,11 @@ from discord.ext import commands
 import random
 import json
 
-class fun(commands.Cog):
+class Fun(commands.Cog):
 
     def __init__(self, client):
         self.client = client
 
-    #FUN
     @commands.command(brief='Random waifu.')
     async def waifu(self, ctx):
         image = discord.Embed()
@@ -54,6 +53,7 @@ class fun(commands.Cog):
             await ctx.send(embed=image)
         except:
             await ctx.send('No meme :(')
+
     @commands.command(brief='shoob :)')
     async def shoob(self, ctx):
         try:
@@ -77,11 +77,7 @@ class fun(commands.Cog):
             image.set_image(url=imageUrl)
             await ctx.send(embed=image)
         except:
-            await ctx.send('No djungelskog :(')
-
-
-
-         
+            await ctx.send('No djungelskog :(')  
 
     @commands.command(brief='No anime.')
     async def noanime(self, ctx):
@@ -115,7 +111,6 @@ class fun(commands.Cog):
     async def scream(self, ctx):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', tts=True)
         
- 
     @commands.command(brief='ping pig')
     async def pingpig(self, ctx, amount=1):
       message = await ctx.send('<@295440396006326272>')
@@ -134,11 +129,6 @@ class fun(commands.Cog):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@386245767725056015> get some sleep', tts=True)
         user = 386245767725056015
         await commands.send_message(user, "fucking sleep ben ffs")
-    
-
-    
- 
-
 
 def setup(client):
-    client.add_cog(fun(client))
+    client.add_cog(Fun(client))

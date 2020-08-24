@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from Crypto.Util.number import long_to_bytes
 
-class useful(commands.Cog):
+class Useful(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -20,4 +20,4 @@ class useful(commands.Cog):
         await ctx.send('https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot')
 
 def setup(client):
-    client.add_cog(useful(client))
+    client.add_cog(Useful(client))
