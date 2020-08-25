@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from discord.ext.commands import has_permissions, MissingPermissions
 
-class admin(commands.Cog):
+class Admin(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -39,4 +39,4 @@ class admin(commands.Cog):
    # add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
 
 def setup(client):
-    client.add_cog(admin(client))
+    client.add_cog(Admin(client))
