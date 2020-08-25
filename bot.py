@@ -5,9 +5,9 @@ from discord.ext.commands import has_permissions, MissingPermissions
 client = commands.Bot(command_prefix = '.')
 
 @client.event
-async def on_ready(self):
+async def on_ready():
     print('The Jambot is here. Hello.')
-    await self.client.change_presence(status=discord.Status.online, activity=discord.Game('Watching over skids'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('Watching over skids'))
 
 @client.event
 async def on_member_join(self, member): 
@@ -32,7 +32,7 @@ async def reload(ctx, extension):
         client.unload_extension(f'cogs.{extension}')
         client.load_extension(f'cogs.{extension}')
     else:
-        await ctx.send("You are not in the sudoers file. This issue will be reported.")
+        await ctx.send("You must be Jammy.")
         return
     
     await ctx.send(f'Successfully reloaded "{extension}".')
@@ -40,4 +40,5 @@ async def reload(ctx, extension):
 client.load_extension('cogs.fun')
 client.load_extension('cogs.admin')
 client.load_extension('cogs.useful')
+client.load_extension('cogs.reddit')
 client.run('')#api key here :)
