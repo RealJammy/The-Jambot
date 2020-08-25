@@ -123,6 +123,10 @@ class Fun(commands.Cog):
     @commands.command(brief='to nag rag')
     async def nagrag(self, ctx):
         await ctx.send('Hey <@624713824087572480> this is a nag')
+     
+    @commands.command(brief='to make das fuck off')
+    async def fuckoffdas(self, ctx):
+        await ctx.send('Hey <@695222074192429136> fuck off')
         
     @commands.command(brief='To force JSnerd to get some sleep')
     async def jsnerd(self, ctx):
