@@ -14,7 +14,7 @@ class Fun(commands.Cog):
         image.set_image(url=f'https://www.thiswaifudoesnotexist.net/example-{random.randint(0, 100000)}.jpg')
         await ctx.send(embed=image)
       
-    @commands.command(brief='pingspam someone.)
+    @commands.command(brief='pingspam someone.')
     async def pingspam(self, ctx, member : discord.Member):
         await ctx.send((member + " ")*100)
     
