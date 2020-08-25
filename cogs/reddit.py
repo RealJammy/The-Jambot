@@ -29,10 +29,10 @@ class Redditstuff(commands.Cog):
 
         async for submission in subreddit.hot(limit = 100):
             if not submission.stickied:
-                submissions.append({"title":submission.title, "link":f"{submission.url}"})
+                submissions.append({"title":submission.title, "link":submission.url, "text":submission.selftext})
         submission = random.choice(submissions)
 
-        embed = discord.Embed(title=submission["title"])
+        embed = discord.Embed(title=submission["title"], description=submission["text"])
         embed.set_image(url=submission["link"])
         await ctx.send(embed=embed)
 
