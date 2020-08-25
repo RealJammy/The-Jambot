@@ -4,7 +4,7 @@ import random
 import json
 import asyncpraw as praw
 
-with open("../creds.json", "r") as creds:
+with open("creds.json", "r") as creds:
 	data = json.load(creds)["creds"]
 	client_id = data["client_id"]
 	client_secret = data["client_secret"]
