@@ -5,7 +5,7 @@ import json
 import asyncpraw as praw
 import configparser
 
-class redditCog(commands.Cog):
+class fiftyfifty(commands.Cog):
 
     def __init__(self, client, sub, limit, order, time):
         config = configparser.ConfigParser()
@@ -38,4 +38,4 @@ class redditCog(commands.Cog):
         await ctx.send(embed=embed) #send embed
 
 def setup(client):
-    client.add_cog(redditCog(client))
+    client.add_cog(fiftyfifty(client))
