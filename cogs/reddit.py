@@ -27,7 +27,7 @@ class Redditstuff(commands.Cog):
         subreddit = await reddit.subreddit(subreddit)
         submissions = []
 
-        async for submission in subreddit.hot(limit = 100):
+        async for submission in subreddit.hot(limit = 125):
             if not submission.stickied:
                 submissions.append({"title":submission.title, "link":submission.url, "text":submission.selftext})
         submission = random.choice(submissions)
