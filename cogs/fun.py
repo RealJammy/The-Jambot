@@ -79,6 +79,16 @@ class Fun(commands.Cog):
         except:
             await ctx.send('No djungelskog :(')  
 
+    @commands.command(brief='koala!')
+    async def koala(self, ctx):
+        try:
+            image = discord.Embed()
+            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/koala').text)['link']
+            image.set_image(url=imageUrl)
+            await ctx.send(embed=image) 
+        except:
+            await ctx.send("No koala :(")
+
     @commands.command(brief='No anime.')
     async def noanime(self, ctx):
         await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg')
@@ -106,6 +116,15 @@ class Fun(commands.Cog):
     @commands.command(brief='uwu')
     async def uwu(self, ctx):
         await ctx.send('uwu!')
+    
+    @commands.command(brief='owo')
+    async def owo(self, ctx):
+        await ctx.send('owo!') 
+
+    
+    @commands.command(brief='yeet')
+    async def yeet(self, ctx):
+        await ctx.send('hi uwu :3')
 
     @commands.command(brief='scream! Only works on PC/ Desktop.')
     async def scream(self, ctx):
