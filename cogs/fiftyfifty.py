@@ -17,8 +17,8 @@ class fiftyfifty(commands.Cog):
 
 
     @commands.command(brief="fiftyfifty HOT/TOP/NEW hour/day/month/week/year/all")
-    async def fiftyfifty(self, ctx, order, time):       
-        sub="fiftyfifty" 
+    async def fiftyfifty(self, ctx, order, time):
+        sub="fiftyfifty"
         if order == 'hot':
             submissions = await self.reddit.subreddit(sub).hot(limit=100,time=time) #get hot
         elif order == 'top':

@@ -28,7 +28,7 @@ class Admin(commands.Cog):
             await commands.send_message(user, "Damn, I'm just a lowly bot but even I think you should have been banned :pensive:")
         except discord.Forbidden:
             await ctx.send("Could not ban user. Check my permissions.")
-    
+
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def gotosleep(self, ctx, role_id: int = 736248018139086911):

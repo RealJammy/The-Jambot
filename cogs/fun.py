@@ -14,7 +14,7 @@ class Fun(commands.Cog):
         image = discord.Embed()
         image.set_image(url=f'https://www.thiswaifudoesnotexist.net/example-{random.randint(0, 100000)}.jpg')
         await ctx.send(embed=image)
-        
+
     @commands.command(brief='red panda!')
     async def panda(self, ctx):
         try:
@@ -24,7 +24,7 @@ class Fun(commands.Cog):
             await ctx.send(embed=image)
         except:
             await ctx.send("No panda :(")
-            
+
     @commands.command(brief='random anime drawing')
     async def anime(self, ctx):
         try:
@@ -78,7 +78,7 @@ class Fun(commands.Cog):
             image.set_image(url=imageUrl)
             await ctx.send(embed=image)
         except:
-            await ctx.send('No djungelskog :(')  
+            await ctx.send('No djungelskog :(')
 
     @commands.command(brief='koala!')
     async def koala(self, ctx):
@@ -86,18 +86,18 @@ class Fun(commands.Cog):
             image = discord.Embed()
             imageUrl = json.loads(requests.get('https://some-random-api.ml/img/koala').text)['link']
             image.set_image(url=imageUrl)
-            await ctx.send(embed=image) 
+            await ctx.send(embed=image)
         except:
             await ctx.send("No koala :(")
 
     @commands.command(brief='No anime.')
     async def noanime(self, ctx):
         await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg')
-    
+
     @commands.command(brief='random.')
     async def randomcmd(self, ctx):
         await ctx.send('https://www.youtube.com/watch?v=63qtYi1nwcs')
-        
+
     @commands.command(brief='Ping!')
     async def ping(self, ctx):
         await ctx.send(f'pong!\n{round(self.client.latency * 1000)}ms')
@@ -113,16 +113,15 @@ class Fun(commands.Cog):
     @commands.command(brief='No leaking!!!')
     async def noleek(self, ctx):
         await ctx.send('https://game.joincyberdiscovery.com/assets/videos/cheating_message.mp4?version=4.2.0')
-        
+
     @commands.command(brief='uwu')
     async def uwu(self, ctx):
         await ctx.send('uwu!')
-    
+
     @commands.command(brief='owo')
     async def owo(self, ctx):
-        await ctx.send('owo!') 
+        await ctx.send('owo!')
 
-    
     @commands.command(brief='yeet')
     async def yeet(self, ctx):
         await ctx.send('hi uwu :3')
@@ -130,24 +129,24 @@ class Fun(commands.Cog):
     @commands.command(brief='scream! Only works on PC/ Desktop.')
     async def scream(self, ctx):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', tts=True)
-        
+
     @commands.command(brief='ping pig')
     async def pingpig(self, ctx, amount=1):
       message = await ctx.send('<@295440396006326272>')
       await ctx.channel.purge(limit=amount+1)
- 
+
     @commands.command(brief='Slough Song')
     async def slough(self, ctx):
         await ctx.send('https://www.youtube.com/watch?v=nwMK2ywRF78')
-            
+
     @commands.command(brief='to nag rag')
     async def nagrag(self, ctx):
         await ctx.send('Hey <@624713824087572480> this is a nag')
-     
+
     @commands.command(brief='to make das fuck off')
     async def fuckoffdas(self, ctx):
         await ctx.send('Hey <@695222074192429136> fuck off')
-        
+
     @commands.command(brief='To force JSnerd to get some sleep')
     async def jsnerd(self, ctx):
         await ctx.send('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <@386245767725056015> get some sleep', tts=True)
