@@ -32,7 +32,7 @@ class Redditstuff(commands.Cog):
                 submissions.append({"title":submission.title, "link":submission.url, "text":submission.selftext})
 
         submission = random.choice(submissions)
-        embed = discord.Embed(title=submission["title"], description=submission["text"], colour=discord.Colour.red())
+        embed = discord.Embed(title=submission["title"], description=submission["text"], colour=0xFF4500)
         embed.set_image(url=submission["link"])
         await ctx.send(embed=embed)
 
