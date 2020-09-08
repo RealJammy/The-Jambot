@@ -24,21 +24,17 @@ class Redditstuff(commands.Cog):
 					password = password,
 					user_agent = "thejambot")
 
-   subreddit = await reddit.subreddit(subreddit)
-   submissions = []
+        subreddit = await reddit.subreddit(subreddit)
+        submissions = []
 
-        MIN_SUBS = 1000
-        if (subreddit.over_18 == False and subreddit.subscribers >= MIN_SUBS) or ctx.message.channel.is_nsfw():
-            async for submission in subreddit.hot(limit = 125):
-                if not submission.stickied:
-                    submissions.append({"title":submission.title, "link":submission.url, "text":submission.selftext})
-                    submission = random.choice(submissions)
+        async for submission in subreddit.hot(limit = 125):
+            if not submission.stickied:
+                submissions.append({"title":submission.title, "link":submission.url, "text":submission.selftext})
 
-                embed = discord.Embed(title=submission["title"], description=submission["text"])
-                embed.set_image(url=submission["link"])
-                await ctx.send(embed=embed)
-        else:
-            await ctx.send('try viewing the subreddit in a nsfw channel')
+        submission = random.choice(submissions)
+        embed = discord.Embed(title=submission["title"], description=submission["text"], colour=discord.Colour.red())
+        embed.set_image(url=submission["link"])
+        await ctx.send(embed=embed)
 
-	def setup(client):
+def setup(client):
     client.add_cog(Redditstuff(client))
