@@ -1,4 +1,2 @@
 discord
-schedule
-time
 asyncpraw
