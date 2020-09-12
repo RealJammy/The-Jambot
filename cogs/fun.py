@@ -149,8 +149,8 @@ class Fun(commands.Cog):
 
     @commands.command(brief='To force JSnerd to get some sleep')
     async def jsnerd(self, ctx):
-        user = 624713824087572480
-        await client.send_message(user, "fucking sleep ben ffs")
+        user = client.get_user(624713824087572480)
+        await user.send('aaaaaaaaaaaa go to sleep')
 
 def setup(client):
     client.add_cog(Fun(client))
