@@ -147,7 +147,7 @@ class Fun(commands.Cog):
     async def fuckoffdas(self, ctx):
         await ctx.send('Hey <@695222074192429136> fuck off')
 
-    @commands.command(brief='To force JSnerd to get some sleep')
+    @client.event
     async def jsnerd(self, ctx):
         user = 624713824087572480
         await client.send_message(user, "fucking sleep ben ffs")
