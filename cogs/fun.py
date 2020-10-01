@@ -170,6 +170,12 @@ class Fun(commands.Cog):
     async def jsnerd(self, ctx):
         user = self.client.get_user(624713824087572480)
         await user.send('aaaaaaaaaaaa go to sleep')
+        
+    #who doesnt want to be rickroll spammed
+    @commands.command(brief='rickroll spam')
+    async def rickrollspam(self, ctx):
+        for i in range(1, 100)
+            await ctx.send('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
 
 def setup(client):
     client.add_cog(Fun(client))
