@@ -1,8 +1,13 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
+import json
 
 client = commands.Bot(command_prefix = '.')
+
+with open("creds.json", "r") as creds:
+    data = json.load(creds)["creds"]
+    token = data["bot_token"]
 
 @client.event
 async def on_ready():
@@ -25,20 +30,22 @@ async def on_commmand_error(self, ctx, error):
         await ctx.send('Please give all the arguments.')
     print(f"ERROR: {error}")
 
-@client.command(brief = 'Reloads cog.', description = 'Do ";reload cog".')
-@has_permissions(administrator = True)
-async def reload(ctx, extension):
-    if ctx.message.author.id == 448519423901433876:
-        client.unload_extension(f'cogs.{extension}')
-        client.load_extension(f'cogs.{extension}')
-    else:
-        await ctx.send("You must be Jammy.")
-        return
+# @client.command(brief = 'Reloads cog.', description = 'Do ";reload cog".')
+# @has_permissions(administrator = True)
+# async def reload(ctx, extension):
+#     if ctx.message.author.id == 448519423901433876:
+#         client.unload_extension(f'cogs.{extension}')
+#         client.load_extension(f'cogs.{extension}')
+#     else:
+#         await ctx.send("You must be Jammy.")
+#         return
 
-    await ctx.send(f'Successfully reloaded "{extension}".')
+#     await ctx.send(f'Successfully reloaded "{extension}".')
+
+#bot hosted on heroku command not needed
 
 client.load_extension('cogs.fun')
 client.load_extension('cogs.admin')
 client.load_extension('cogs.useful')
 client.load_extension('cogs.reddit')
-client.run('')#api key here :)
+client.run(token)#api key here :)
