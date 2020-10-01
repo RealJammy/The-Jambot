@@ -34,10 +34,10 @@ class Fun(commands.Cog):
                 data = (await resp.json())['data']
             count = int(data['dist'])
             post = data['children'][random.randint(1, count)]['data']
-            imageUrl = post['url_overridden_by_dest']
+            image_url = post['url_overridden_by_dest']
             title = post['title']
             image = discord.Embed(title=title)
-            image.set_image(url=imageUrl)
+            image.set_image(url=image_url)
             await ctx.send(embed=image)
         except:
             await ctx.send('no anime')
@@ -49,10 +49,10 @@ class Fun(commands.Cog):
                 data = (await resp.json())['data']
             count = int(data['dist'])
             post = data['children'][random.randint(1, count)]['data']
-            imageUrl = post['url_overridden_by_dest']
+            image_url = post['url_overridden_by_dest']
             title = post['title']
             image = discord.Embed(title=title)
-            image.set_image(url=imageUrl)
+            image.set_image(url=image_url)
             await ctx.send(embed=image)
         except:
             await ctx.send('No meme :(')
@@ -62,8 +62,8 @@ class Fun(commands.Cog):
         try:
             image = discord.Embed()
             async with self.session.get('https://dog.ceo/api/breed/samoyed/images/random') as resp:
-                imageUrl = (await resp.json())['message']
-            image.set_image(url=imageUrl)
+                image_url = (await resp.json())['message']
+            image.set_image(url=image_url)
             await ctx.send(embed=image)
         except:
             await ctx.send("No shoob :(")
@@ -75,10 +75,10 @@ class Fun(commands.Cog):
                 data = (await resp.json())['data']
             count = int(data['dist'])
             post = data['children'][random.randint(1, count)]['data']
-            imageUrl = post['url_overridden_by_dest']
+            image_url = post['url_overridden_by_dest']
             title = post['title']
             image = discord.Embed(title=title)
-            image.set_image(url=imageUrl)
+            image.set_image(url=image_url)
             await ctx.send(embed=image)
         except:
             await ctx.send('No djungelskog :(')
@@ -88,8 +88,8 @@ class Fun(commands.Cog):
         try:
             image = discord.Embed()
             async with self.session.get('https://some-random-api.ml/img/koala') as resp:
-                imageUrl = (await resp.json())['link']
-            image.set_image(url=imageUrl)
+                image_url = (await resp.json())['link']
+            image.set_image(url=image_url)
             await ctx.send(embed=image)
         except:
             await ctx.send("No koala :(")
