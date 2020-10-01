@@ -11,23 +11,23 @@ Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?
 The prefix for the bot is `.`
 
 Fun:
- - anime       | random anime drawing
- - djungelskog | djungelskog!
- - github      | Github.
+ - anime       | Random anime drawing
+ - djungelskog | Djungelskog!
+ - github      | Github
  - jsnerd      | To force JSnerd to get some sleep
- - lyne        | Lyne.
- - meme        | random meme
- - nagrag      | to nag rag
+ - lyne        | Lyne
+ - meme        | Random meme
+ - nagrag      | To nag rag
  - noanime     | No anime.
  - noleek      | No leaking!!!
- - panda       | red panda!
+ - panda       | Red panda!
  - ping        | Ping!
- - pingpig     | ping pig
- - randomcmd   | random.
- - scream      | scream! Only works on PC/ Desktop.
- - shoob       | shoob :)
+ - pingpig     | Ping pig
+ - randomcmd   | Random.
+ - scream      | Scream! Only works on PC/ Desktop.
+ - shoob       | Shoob :)
  - slough      | Slough Song
- - uwu         | uwu
+ - uwu         | Uwu
  - waifu       | Random waifu.
  
 Redditstuff:
