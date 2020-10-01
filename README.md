@@ -10,35 +10,47 @@ Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?
 ## Notes:
 The prefix for the bot is `.`
 
-Fun:
- - anime       | Random anime drawing
- - djungelskog | Djungelskog!
- - github      | Github
- - jsnerd      | To force JSnerd to get some sleep
- - lyne        | Lyne
- - meme        | Random meme
- - nagrag      | To nag rag
- - noanime     | No anime.
- - noleek      | No leaking!!!
- - panda       | Red panda!
- - ping        | Ping!
- - pingpig     | Ping pig
- - randomcmd   | Random.
- - scream      | Scream! Only works on PC/ Desktop.
- - shoob       | Shoob :)
- - slough      | Slough Song
- - uwu         | Uwu
- - waifu       | Random waifu.
+# Fun
+
+| Command name | Description |
+| ------------ | ----------- |
+| anime | Random anime drawing |
+| djungelskog | Djungelskog! |
+| github | Github |
+| jsnerd | To force JSnerd to get some sleep |
+| lyne | Lyne |
+| meme | Random meme |
+| nagrag | To nag rag |
+| noanime | No anime. |
+| noleek | No leaking!!! |
+| panda | Red panda! |
+| ping | Ping! |
+| pingpig | Ping pig |
+| randomcmd | Random. |
+| scream | Scream! Only works on PC/ Desktop. |
+| shoob | Shoob :) |
+| slough | Slough Song |
+| uwu | Uwu |
+| waifu | Random waifu. |
  
-Redditstuff:
- - reddit      | Get a random meme from a subreddit
+# Redditstuff
+
+| Command name | Description |
+| ------------ | ----------- |
+| reddit | Get a random meme from a subreddit |
  
-Useful:
-  - invite      | Gives a bot discord invite.
-  - lb          | Decode a number to bytes
+# Useful
+
+| Command name | Description |
+| ------------ | ----------- |
+| invite | Gives a bot discord invite. |
+| lb | Decode a number to bytes |
   
-​No Category:
-  - help       |  Shows this message
+# No Category
+
+| Command name | Description |
+| ------------ | ----------- |
+| help | Shows a help message |
 
 Type .help command for more info on a command.
 You can also type .help category for more info on a category.
