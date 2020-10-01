@@ -2,12 +2,13 @@ import discord
 from discord.ext import commands
 import random
 import json
-import requests
+import aiohttp
 
 class Fun(commands.Cog):
 
     def __init__(self, client):
         self.client = client
+        self.session = aiohttp.ClientSession()
 
     @commands.command(brief='Random waifu.')
     async def waifu(self, ctx):
@@ -19,7 +20,8 @@ class Fun(commands.Cog):
     async def panda(self, ctx):
         try:
             image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/red_panda').text)['link']
+            async with self.session.get('https://some-random-api.ml/img/red_panda') as resp:
+                imageUrl = (await resp.json())['link']
             image.set_image(url=imageUrl)
             await ctx.send(embed=image)
         except:
@@ -28,8 +30,8 @@ class Fun(commands.Cog):
     @commands.command(brief='random anime drawing')
     async def anime(self, ctx):
         try:
-            res = requests.get('https://json.reddit.com/r/AnimeDrawings/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'})
-            data = json.loads(res.text)['data']
+            async with self.session.get('https://json.reddit.com/r/AnimeDrawings/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'}) as resp:
+                data = (await resp.json())['data']
             count = int(data['dist'])
             post = data['children'][random.randint(1, count)]['data']
             imageUrl = post['url_overridden_by_dest']
@@ -43,8 +45,8 @@ class Fun(commands.Cog):
     @commands.command(brief='random meme')
     async def meme(self, ctx):
         try:
-            res = requests.get('https://json.reddit.com/r/memes/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'})
-            data = json.loads(res.text)['data']
+            async with self.session.get('https://json.reddit.com/r/memes/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'}) as resp:
+                data = (await resp.json())['data']
             count = int(data['dist'])
             post = data['children'][random.randint(1, count)]['data']
             imageUrl = post['url_overridden_by_dest']
@@ -59,7 +61,8 @@ class Fun(commands.Cog):
     async def shoob(self, ctx):
         try:
             image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://dog.ceo/api/breed/samoyed/images/random').text)['message']
+            async with self.session.get('https://dog.ceo/api/breed/samoyed/images/random') as resp:
+                imageUrl = (await resp.json())['message']
             image.set_image(url=imageUrl)
             await ctx.send(embed=image)
         except:
@@ -68,8 +71,8 @@ class Fun(commands.Cog):
     @commands.command(brief='djungelskog!')
     async def djungelskog(self, ctx):
         try:
-            res = requests.get('https://json.reddit.com/r/Djungelskog/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'})
-            data = json.loads(res.text)['data']
+            async with self.session.get('https://json.reddit.com/r/Djungelskog/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'}) as resp:
+                data = (await resp.json())['data']
             count = int(data['dist'])
             post = data['children'][random.randint(1, count)]['data']
             imageUrl = post['url_overridden_by_dest']
@@ -84,7 +87,8 @@ class Fun(commands.Cog):
     async def koala(self, ctx):
         try:
             image = discord.Embed()
-            imageUrl = json.loads(requests.get('https://some-random-api.ml/img/koala').text)['link']
+            async with self.session.get('https://some-random-api.ml/img/koala') as resp:
+                imageUrl = (await resp.json())['link']
             image.set_image(url=imageUrl)
             await ctx.send(embed=image)
         except:
