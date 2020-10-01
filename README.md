@@ -29,11 +29,14 @@ Fun:
  - slough      | Slough Song
  - uwu         | uwu
  - waifu       | Random waifu.
+ 
 Redditstuff:
  - reddit      | Get a random meme from a subreddit
+ 
 Useful:
   - invite      | Gives a bot discord invite.
   - lb          | Decode a number to bytes
+  
 ​No Category:
   - help       |  Shows this message
 
