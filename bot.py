@@ -4,6 +4,7 @@ from discord.ext.commands import has_permissions, MissingPermissions
 import json
 
 client = commands.Bot(command_prefix = '.')
+client.remove_command('help')
 
 with open("creds.json", "r") as creds:
     data = json.load(creds)["creds"]
