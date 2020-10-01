@@ -21,7 +21,7 @@ class Redditstuff(commands.Cog):
 					password = password,
 					user_agent = "thejambot")
 
-    @commands.command(brief="Get a random meme from a subreddit")
+    @commands.command(brief="Get a random meme, image or post from a subreddit")
     async def reddit(self, ctx, subreddit):
         subreddit = await self.reddit.subreddit(subreddit)
         submissions = []
@@ -34,7 +34,9 @@ class Redditstuff(commands.Cog):
         embed = discord.Embed(title=submission["title"], description=submission["text"], colour=0xFF4500)
         embed.set_image(url=submission["link"])
         await ctx.send(embed=embed)
+    
 
+	
     @commands.command(brief="CD skid time owo")
     async def skid(self, ctx):
         subreddit = await self.reddit.subreddit("cyberdiscovery")
