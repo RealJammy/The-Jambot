@@ -170,6 +170,10 @@ class Fun(commands.Cog):
     async def jsnerd(self, ctx):
         user = self.client.get_user(624713824087572480)
         await user.send('aaaaaaaaaaaa go to sleep')
+        
+    @commands.command(brief='EHF Playlist- aka an elite playlist')
+    async def ehftunez(self, ctx):
+        await ctx.send('https://open.spotify.com/playlist/5ATjDhDw84rid3SQ4rXNZ7?si=BX8GuJYXTXSo09T5ZlybdA')
 
 def setup(client):
     client.add_cog(Fun(client))
