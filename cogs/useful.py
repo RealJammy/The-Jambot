@@ -19,7 +19,7 @@ class Useful(commands.Cog):
         await ctx.send('https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot')
     
     @commands.command(brief='Gives a link to The Jambot repo.')
-    async def repo(self, ctx)
+    async def repo(self, ctx):
         await ctx.send('https://github.com/RealJammy/The-Jambot')
         await ctx.send('pls star owo')
 
