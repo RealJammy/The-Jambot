@@ -1,37 +1,11 @@
 import discord
 from discord.ext import commands, tasks
 from discord.ext.commands import has_permissions, MissingPermissions
-#import schedule, time #to be used for the last function in here (probably, i think)
 
-class admin(commands.Cog):
+class Admin(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-
-    #EVENTS
-
-    @commands.Cog.listener() #check if this works instead of going off of ur old code jamie
-    async def on_ready(self):
-        print('The Jambot is here. Hello.')
-        await self.client.change_presence(status=discord.Status.online, activity=discord.Game('Watching over skids'))
-
-    @commands.Cog.listener()
-    async def on_member_join(self, member): #also check if this works lol- will run one big test at the end probably
-        channel = discord.utils.get(message.guild.channels, name='general')
-        await channel.send(f'{member} has joined the server. :smile:')
-
-    @commands.Cog.listener()
-    async def on_member_remove(self, member): #should probably stop putting a note to check at every function lmao
-        channel = discord.utils.get(message.guild.channels, name='general')
-        await channel.send(f'{member} has left the server. :pensive:')
-    
-    @commands.Cog.listener()
-    async def on_commmand_error(self, ctx, error): 
-        if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send('Please give all the arguments.')
-        print(f"ERROR: {error}")
-
-    #ACTUAL ADMIN STUFF (im not screaming, my eyesight is just poor so it helps me see)
 
     @commands.command(brief='Clear messages in channel (default 5).', description='Do ".byebye amount_to_clear".')
     @commands.has_permissions(administrator=True)
@@ -55,8 +29,6 @@ class admin(commands.Cog):
         except discord.Forbidden:
             await ctx.send("Could not ban user. Check my permissions.")
 
-   # USING AUTOMATED VERSION INSTEAD- JAMMY JUST SAY IF YOU WANT THIS TOO
-    
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def gotosleep(self, ctx, role_id: int = 736248018139086911):
@@ -67,4 +39,4 @@ class admin(commands.Cog):
    # add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
 
 def setup(client):
-    client.add_cog(admin(client))
+    client.add_cog(Admin(client))
