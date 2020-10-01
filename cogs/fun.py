@@ -41,7 +41,22 @@ class Fun(commands.Cog):
             await ctx.send(embed=image)
         except:
             await ctx.send('no anime')
-
+            
+    @commands.command(brief='random kirby!')
+    async def kirb(self, ctx):
+        try:
+            async with self.session.get('https://json.reddit.com/r/Kirby/hot/?sort=hot', headers={'User-Agent': 'Mozilla/5.0'}) as resp:
+                data = (await resp.json())['data']
+            count = int(data['dist'])
+            post = data['children'][random.randint(1, count)]['data']
+            image_url = post['url_overridden_by_dest']
+            title = post['title']
+            image = discord.Embed(title=title)
+            image.set_image(url=image_url)
+            await ctx.send(embed=image)
+        except:
+            await ctx.send('no kirb :c')
+            
     @commands.command(brief='random meme')
     async def meme(self, ctx):
         try:
