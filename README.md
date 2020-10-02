@@ -57,7 +57,7 @@ The prefix for the bot is `.`
 | lb | Decode a number to bytes |
 | repo | Gives a link to The Jambot repo. | 
 
-# MATHS
+# Maths
 
 | Command name | Description |
 | ------------ | ----------- |
