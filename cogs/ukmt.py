@@ -25,7 +25,7 @@ class UKMT(commands.Cog):
       await ctx.send(file=discord.File("MATHS-IMAGES/junior/" + year + "/" + problem))
     except:
       await ctx.send("Intermediate Mathematical Competition problems only available from 2004 to 2018")
-  
+
   @commands.command(brief = "Generate SMC problem, usage: .smc <year>")
   async def smc(self, ctx, year): # from years 2005 - 2018
     try:
