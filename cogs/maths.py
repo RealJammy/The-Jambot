@@ -10,7 +10,7 @@ from sympy.parsing.sympy_parser import parse_expr
 
 LATEX_URL = "https://latex.codecogs.com/png.download?%5Cdpi%7B150%7D%20%5Cbg_white%20%5Chuge%20"
 
-class maths(commands.Cog):
+class Maths(commands.Cog):
 
   def __init__(self,client):
     self.client = client
@@ -60,4 +60,4 @@ class maths(commands.Cog):
           await ctx.send(file=file)
 
 def setup(client):
-  client.add_cog(maths(client))
+  client.add_cog(Maths(client))
