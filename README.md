@@ -16,13 +16,18 @@ The prefix for the bot is `.`
 | ------------ | ----------- |
 | anime | Random anime drawing |
 | djungelskog | Djungelskog! |
+| ehftunez | Listen to some tunez | 
+| fuckoffdas | To make das fuck off | 
 | github | Github |
 | jsnerd | To force JSnerd to get some sleep |
+| kirb | Random Kirby! | 
+| koala | Random koala! | 
 | lyne | Lyne |
 | meme | Random meme |
 | nagrag | To nag rag |
 | noanime | No anime. |
 | noleek | No leaking!!! |
+| owo | Owo! | 
 | panda | Red panda! |
 | ping | Ping! |
 | pingpig | Ping pig |
@@ -32,12 +37,17 @@ The prefix for the bot is `.`
 | slough | Slough Song |
 | uwu | Uwu |
 | waifu | Random waifu. |
+| yeet | Yeet! | 
+
  
 # Redditstuff
 
 | Command name | Description |
 | ------------ | ----------- |
-| reddit | Get a random meme from a subreddit |
+| reddit [subreddit] | Get a random meme from a subreddit |
+| skid | CD skid time owo | 
+| askreddit | Get top answers for r/askreddit questions | 
+| aita | Get top responses from Am I The Asshole Posts. | 
  
 # Useful
 
@@ -45,7 +55,17 @@ The prefix for the bot is `.`
 | ------------ | ----------- |
 | invite | Gives a bot discord invite. |
 | lb | Decode a number to bytes |
+| repo | Gives a link to The Jambot repo. | 
+
+# Admin
   
+| Command name | Description |
+| ------------ | ----------- | 
+| byebye [amount to clear] | Clear messages in channel (default 5). | 
+| kick | Kicks users | 
+| ban | Bans users | 
+| gotosleep | Ping everyone who's online at the time to go to sleep! | 
+
 # No Category
 
 | Command name | Description |
