@@ -64,6 +64,7 @@ The prefix for the bot is `.`
 | jmc [year] | Generates a random problem from JMC |
 | imc [year] | Generates a random problem from IMC |
 | smc [year] | Generates a random problem from SMC |
+| latexify [word] | Latexifies text :) |
 
 # Admin
   
