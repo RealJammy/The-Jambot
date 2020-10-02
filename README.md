@@ -57,6 +57,14 @@ The prefix for the bot is `.`
 | lb | Decode a number to bytes |
 | repo | Gives a link to The Jambot repo. | 
 
+# UKMT
+
+| Command name | Description |
+| ------------ | ----------- |
+| jmc [year] | Generates a random problem from JMC |
+| imc [year] | Generates a random problem from IMC |
+| smc [year] | Generates a random problem from SMC |
+
 # Admin
   
 | Command name | Description |
