@@ -1,0 +1,24 @@
+{
+  "console" : {
+	    "activated" : "Bot activated",
+	    "member_joined" : "[Event:UserJoin] ",
+      "member_left" : "[Event:UserRemove] ",
+      "command_error" : "[Event:CommandError] ",
+      "cog_reload" : "[Event:CogReload] "
+	},
+"guild" : {
+      "insufficient_perms" : "You do not have permission to do that",
+      "member_joined" : "Welcome ",
+      "member_left" : "Goodbye ",
+      "command_error" : "That command didn't work, have you got all the right arguments?",
+      "cog_reload" : "Succesfully reloaded "
+},
+"meta" : {
+       "cmd_prefix" : ".",
+       "bot_game" : "Watching over skids",
+       "admin_ids" : [583622520780095508]
+},
+"creds" : {
+       "bot_token" : "NzYxMjczODMyNTQzNDg1OTU0.X3YNgQ.0dMR_U7ayd7VMXsfDCIiugDZlDE"
+      }
+}

@@ -1,0 +1,7 @@
+{
+"insufficient_perms" : "You do not have permission to do that",
+      	"member_joined" : "Welcome ",
+      	"member_left" : "Goodbye ",
+      	"command_error" : "That command didn't work, have you got all the right arguments?",
+      	"cog_reload" : "Succesfully reloaded "
+}

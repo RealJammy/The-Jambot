@@ -1,12 +1,15 @@
 import discord
 from discord.ext import commands, tasks
 from discord.ext.commands import has_permissions, MissingPermissions
+from datetime import datetime
+import threading
 
 class Admin(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-
+        self.now = datetime.now().strftime("%H:%M:%S")
+    
     @commands.command(brief='Clear messages in channel (default 5).', description='Do ".byebye amount_to_clear".')
     @commands.has_permissions(administrator=True)
     async def byebye(self, ctx, amount=6): #6 because it needs to clear the command message too
@@ -32,9 +35,10 @@ class Admin(commands.Cog):
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def gotosleep(self, ctx, role_id: int = 736248018139086911):
-        awake = [member for member in ctx.guild.get_role(role_id).members if member.status != discord.Status.offline and not member.bot]
+        awake = [member for member in ctx.guild.members if member.status != discord.Status.offline and not member.bot]
         text = ''.join(f'<@{member.id}> ' for member in awake) + "GO TO SLEEP"
         await ctx.send(text)
+
 
    # add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
 

@@ -1,0 +1,7 @@
+{
+	"activated" : "[Event:BotActivated] ",
+	"member_joined" : "[Event:UserJoin] ",
+      	"member_left" : "[Event:UserRemove] ",
+      	"command_error" : "[Event:CommandError] ",
+      	"cog_reload" : "[Event:CogReload] "
+}
