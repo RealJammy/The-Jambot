@@ -1,16 +1,17 @@
 # The Jambot
 The Jambot is a fun, interactive and easy to use discord bot created by me, Jammy. There are many commands the bot is able to execute- from quick, useful commands such as purging to fun commands such as displaying anime (or no anime!).
 
-
 Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot
 
+---
 
-<hr>
+## Notes
 
-## Notes:
 The prefix for the bot is `.`
 
-# Fun
+## Commands
+
+#### Fun
 
 | Command name | Description |
 | ------------ | ----------- |
@@ -40,7 +41,7 @@ The prefix for the bot is `.`
 | yeet | Yeet! | 
 
  
-# Redditstuff
+### Redditstuff
 
 | Command name | Description |
 | ------------ | ----------- |
@@ -49,7 +50,7 @@ The prefix for the bot is `.`
 | askreddit | Get top answers for r/askreddit questions | 
 | aita | Get top responses from Am I The Asshole Posts. | 
  
-# Useful
+### Useful
 
 | Command name | Description |
 | ------------ | ----------- |
@@ -57,7 +58,7 @@ The prefix for the bot is `.`
 | lb | Decode a number to bytes |
 | repo | Gives a link to The Jambot repo. | 
 
-# Maths
+### Maths
 
 | Command name | Description |
 | ------------ | ----------- |
@@ -66,7 +67,7 @@ The prefix for the bot is `.`
 | smc [year] | Generates a random problem from SMC |
 | latexify [word] | Latexifies text :) |
 
-# Admin
+### Admin
   
 | Command name | Description |
 | ------------ | ----------- | 
@@ -75,7 +76,7 @@ The prefix for the bot is `.`
 | ban | Bans users | 
 | gotosleep | Ping everyone who's online at the time to go to sleep! | 
 
-# No Category
+### No Category
 
 | Command name | Description |
 | ------------ | ----------- |
@@ -84,8 +85,7 @@ The prefix for the bot is `.`
 Type .help command for more info on a command.
 You can also type .help category for more info on a category.
 
-
-<hr>
+---
 
 ## Usage of the code:
 
@@ -93,17 +93,9 @@ Feel free to use this code to make your own discord bot, as long as you credit m
 
 Also when reusing this code, make sure to run:
 
-```
+```shell
 python3 -m pip install discord.py
 ```
-
-<hr>
-
-## Contact:
-
-If you have any feedback about the bot, please get in contact with me on twitter (https://twitter.com/CaptureTheJam).
-
-<hr>
 
 ## Contributors:
 
