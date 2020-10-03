@@ -1,15 +1,16 @@
 # The Jambot
-The Jambot is a fun, interactive and easy to use discord bot created by me, Jammy. There are many commands the bot is able to execute- from quick, useful commands such as purging to fun commands such as displaying anime (or no anime!).
 
-Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot
+The Jambot is a fun, interactive and easy to use discord bot created by [me, *Jammy*](https://github.com/RealJammy). There are many commands the bot is able to execute - from quick, useful commands such as purging to fun commands such as displaying anime (or no anime!).
 
----
+**Feel free to add it to your server at: https://discord.com/api/oauth2/authorize?client_id=742802810843693089&permissions=8&scope=bot**
 
 ## Notes
 
-The prefix for the bot is `.`
+- The Jambot's prefix is **`.`**
 
 ## Commands
+
+All commands of The Jambot are listed below in the relevant subheadings
 
 #### Fun
 
@@ -85,19 +86,7 @@ The prefix for the bot is `.`
 Type .help command for more info on a command.
 You can also type .help category for more info on a category.
 
----
-
-## Usage of the code:
-
-Feel free to use this code to make your own discord bot, as long as you credit me.
-
-Also when reusing this code, make sure to run:
-
-```shell
-python3 -m pip install discord.py
-```
-
-## Contributors:
+## Contributors
 
 If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work <3.
 
