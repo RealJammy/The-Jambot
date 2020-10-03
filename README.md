@@ -88,7 +88,7 @@ You can also type .help category for more info on a category.
 
 ## Contributors
 
-If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work <3.
+If you make a change to the bot that ends up in its main code, you will be listed here. Thank you for your kind work ❤️.
 
 - [willwam845](https://github.com/willwam845)
 - [potato-jackson](https://github.com/potato-jackson)
@@ -102,3 +102,4 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - [Waffle/Maria](https://github.com/maria-waffle)
 - [ben-sommer](https://github.com/ben-sommer)
 - [rag7](https://github.com/rag7)
+- [Owez](https://ogriffiths.com)
