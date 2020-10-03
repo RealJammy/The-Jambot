@@ -44,44 +44,46 @@ All commands of The Jambot are listed below in the relevant subheadings
  
 ### Redditstuff
 
-| Command name | Description |
-| ------------ | ----------- |
-| reddit [subreddit] | Get a random meme from a subreddit |
-| skid | CD skid time owo | 
-| askreddit | Get top answers for r/askreddit questions | 
-| aita | Get top responses from Am I The Asshole Posts. | 
+| Command name       | Description                                    |
+| ------------------ | ---------------------------------------------- |
+| reddit [subreddit] | Get a random meme from a subreddit             |
+| skid               | CD skid time owo                               | 
+| askreddit          | Get top answers for r/askreddit questions      | 
+| aita               | Get top responses from Am I The Asshole Posts. | 
  
 ### Useful
 
-| Command name | Description |
-| ------------ | ----------- |
-| invite | Gives a bot discord invite. |
-| lb | Decode a number to bytes |
-| repo | Gives a link to The Jambot repo. | 
+| Command name | Description                      |
+| ------------ | -------------------------------- |
+| invite       | Gives a bot discord invite.      |
+| lb           | Decode a number to bytes         |
+| repo         | Gives a link to The Jambot repo. | 
 
 ### Maths
 
-| Command name | Description |
-| ------------ | ----------- |
-| jmc [year] | Generates a random problem from JMC |
-| imc [year] | Generates a random problem from IMC |
-| smc [year] | Generates a random problem from SMC |
-| latexify [word] | Latexifies text :) |
+| Command name    | Description                         |
+| --------------- | ----------------------------------- |
+| jmc [year]      | Generates a random problem from JMC |
+| imc [year]      | Generates a random problem from IMC |
+| smc [year]      | Generates a random problem from SMC |
+| latexify [word] | Latexifies text :)                  |
 
 ### Admin
-  
-| Command name | Description |
-| ------------ | ----------- | 
-| byebye [amount to clear] | Clear messages in channel (default 5). | 
-| kick | Kicks users | 
-| ban | Bans users | 
+
+As the name implies, these are admin-only commands
+
+| Command name             | Description                             |
+| ------------------------ | --------------------------------------- | 
+| byebye [amount to clear] | Clear messages in channel (default 5).  | 
+| kick                     | Kicks users                             | 
+| ban                      | Bans users                              | 
 | gotosleep | Ping everyone who's online at the time to go to sleep! | 
 
 ### No Category
 
-| Command name | Description |
-| ------------ | ----------- |
-| help | Shows a help message |
+| Command name | Description          |
+| ------------ | -------------------- |
+| help         | Shows a help message |
 
 Type .help command for more info on a command.
 You can also type .help category for more info on a category.
