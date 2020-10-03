@@ -14,32 +14,32 @@ All commands of The Jambot are listed below in the relevant subheadings
 
 #### Fun
 
-| Command name | Description |
-| ------------ | ----------- |
-| anime | Random anime drawing |
-| djungelskog | Djungelskog! |
-| ehftunez | Listen to some tunez | 
-| fuckoffdas | To make das fuck off | 
-| github | Github |
-| jsnerd | To force JSnerd to get some sleep |
-| kirb | Random Kirby! | 
-| koala | Random koala! | 
-| lyne | Lyne |
-| meme | Random meme |
-| nagrag | To nag rag |
-| noanime | No anime. |
-| noleek | No leaking!!! |
-| owo | Owo! | 
-| panda | Red panda! |
-| ping | Ping! |
-| pingpig | Ping pig |
-| randomcmd | Random. |
-| scream | Scream! Only works on PC/ Desktop. |
-| shoob | Shoob :) |
-| slough | Slough Song |
-| uwu | Uwu |
-| waifu | Random waifu. |
-| yeet | Yeet! | 
+| Command name | Description                        |
+| ------------ | ---------------------------------- |
+| anime        | Random anime drawing               |
+| djungelskog  | Djungelskog!                       |
+| ehftunez     | Listen to some tunez               | 
+| fuckoffdas   | To make das fuck off               | 
+| github       | Github                             |
+| jsnerd       | To force JSnerd to get some sleep  |
+| kirb         | Random Kirby!                      | 
+| koala        | Random koala!                      | 
+| lyne         | Lyne                               |
+| meme         | Random meme                        |
+| nagrag       | To nag rag                         |
+| noanime      | No anime.                          |
+| noleek       | No leaking!!!                      |
+| owo          | Owo!                               | 
+| panda        | Red panda!                         |
+| ping         | Ping!                              |
+| pingpig      | Ping pig                           |
+| randomcmd    | Random.                            |
+| scream       | Scream! Only works on PC/ Desktop. |
+| shoob        | Shoob :)                           |
+| slough       | Slough Song                        |
+| uwu          | Uwu                                |
+| waifu        | Random waifu.                      |
+| yeet         | Yeet!                              | 
 
  
 ### Redditstuff
