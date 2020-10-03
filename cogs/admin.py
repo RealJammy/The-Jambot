@@ -55,7 +55,7 @@ class Admin(commands.Cog):
         await ctx.send(text)
 
 
-# add automated version at some point- like every night at 3am it gets online users and tells em to sleep.
+# TODO: add automated version at some point e.g. every night at ~3am it gets online users and tells em to sleep.
 
 
 def setup(client):
