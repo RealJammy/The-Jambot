@@ -26,9 +26,11 @@ async def on_member_remove(self, member):
     await channel.send(f'{member} has left the server. :pensive:')
 
 @client.event
-async def on_commmand_error(self, ctx, error):
-    if isinstance(error, commands.MissingRequiredArgument):
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.errors.MissingRequiredArgument):
         await ctx.send('Please give all the arguments.')
+    elif isinstance(error,commands.errors.BadArgument):
+        await ctx.send("Conversion of arguments failed.")
     print(f"ERROR: {error}")
 
 # @client.command(brief = 'Reloads cog.', description = 'Do ";reload cog".')
