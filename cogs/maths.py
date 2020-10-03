@@ -16,7 +16,8 @@ class Maths(commands.Cog):
     self.client = client
 
   @commands.command(brief = "Generate Junior Mathematical Competition problem, usage: .jmc <year>")
-  async def jmc(self, ctx, year): # from years 2004 - 2018
+  async def jmc(self, ctx, year: int): # from years 2004 - 2018
+    year = str(year)
     try:
       allProblems = os.listdir("MATHS-IMAGES/junior/" + year)
       problem = random.choice(allProblems)
@@ -25,7 +26,8 @@ class Maths(commands.Cog):
       await ctx.send("Junior Mathematical Competition problems only available from 2004 to 2018")
 
   @commands.command(brief = "Generate Intermediate Mathematical Competition problem, usage: .imc <year>")
-  async def imc(self, ctx, year): # from years 2004 - 2018
+  async def imc(self, ctx, year: int): # from years 2004 - 2018
+    year = str(year)
     try:
       allProblems = os.listdir("MATHS-IMAGES/intermediate/" + year)
       problem = random.choice(allProblems)
@@ -34,7 +36,8 @@ class Maths(commands.Cog):
       await ctx.send("Intermediate Mathematical Competition problems only available from 2004 to 2018")
   
   @commands.command(brief = "Generate Senior Mathematical Competition problem, usage: .smc <year>")
-  async def smc(self, ctx, year): # from years 2005 - 2018
+  async def smc(self, ctx, year: int): # from years 2005 - 2018
+    year = str(year)
     try:
       allProblems = os.listdir("MATHS-IMAGES/senior/" + year)
       problem = random.choice(allProblems)
