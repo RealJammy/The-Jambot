@@ -72,12 +72,12 @@ All commands of The Jambot are listed below in the relevant subheadings
 
 As the name implies, these are admin-only commands
 
-| Command name             | Description                             |
-| ------------------------ | --------------------------------------- | 
-| byebye [amount to clear] | Clear messages in channel (default 5).  | 
-| kick                     | Kicks users                             | 
-| ban                      | Bans users                              | 
-| gotosleep | Ping everyone who's online at the time to go to sleep! | 
+| Command name             | Description                                            |
+| ------------------------ | ------------------------------------------------------ | 
+| byebye [amount to clear] | Clear messages in channel (default 5).                 | 
+| kick                     | Kicks users                                            | 
+| ban                      | Bans users                                             | 
+| gotosleep                | Ping everyone who's online at the time to go to sleep! | 
 
 ### No Category
 
