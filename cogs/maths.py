@@ -1,17 +1,20 @@
 import discord
 from discord.ext import commands
 import os
-import random
+from random import choice as random
 from io import BytesIO
 from urllib.parse import quote
 from aiohttp import ClientSession
 from sympy import latex
 from sympy.parsing.sympy_parser import parse_expr
+import json
 
 LATEX_URL = (
     "https://latex.codecogs.com/png.download?%5Cdpi%7B150%7D%20%5Cbg_white%20%5Chuge%20"
 )
 
+with open("resources/file.json") as file:
+    data = json.load(file)
 
 class Maths(commands.Cog):
     def __init__(self, client):
@@ -22,48 +25,58 @@ class Maths(commands.Cog):
     )
     async def jmc(self, ctx, year: int):  # from years 2004 - 2018
         year = str(year)
+
         try:
-            allProblems = os.listdir("MATHS-IMAGES/junior/" + year)
-            problem = random.choice(allProblems)
-            await ctx.send(
-                file=discord.File("MATHS-IMAGES/junior/" + year + "/" + problem)
-            )
+            question = data["JMC"][year]["questions"]
         except:
-            await ctx.send(
-                "Junior Mathematical Competition problems only available from 2004 to 2018"
-            )
+            await ctx.send("Sorry, can only be between 2004-2018")
+            return
+
+        question = random(question)
+
+        embed = discord.Embed(title="JMC-"+year, colour=0x00008B)
+        embed.set_image(url=question)
+    
+        await ctx.send(embed=embed)
 
     @commands.command(
         brief="Generate Intermediate Mathematical Competition problem, usage: .imc <year>"
     )
     async def imc(self, ctx, year: int):  # from years 2004 - 2018
         year = str(year)
+
         try:
-            allProblems = os.listdir("MATHS-IMAGES/intermediate/" + year)
-            problem = random.choice(allProblems)
-            await ctx.send(
-                file=discord.File("MATHS-IMAGES/junior/" + year + "/" + problem)
-            )
+            question = data["IMC"][year]["questions"]
         except:
-            await ctx.send(
-                "Intermediate Mathematical Competition problems only available from 2004 to 2018"
-            )
+            await ctx.send("Sorry, can only be between 2004-2018")
+            return
+
+        question = random(question)
+
+        embed = discord.Embed(title="IMC-"+year, colour=0x00008B)
+        embed.set_image(url=question)
+    
+        await ctx.send(embed=embed)
+        
 
     @commands.command(
         brief="Generate Senior Mathematical Competition problem, usage: .smc <year>"
     )
     async def smc(self, ctx, year: int):  # from years 2005 - 2018
         year = str(year)
+
         try:
-            allProblems = os.listdir("MATHS-IMAGES/senior/" + year)
-            problem = random.choice(allProblems)
-            await ctx.send(
-                file=discord.File("MATHS-IMAGES/senior/" + year + "/" + problem)
-            )
+            question = data["SMC"][year]["questions"]
         except:
-            await ctx.send(
-                "Senior Mathematical Competition problems only available from 2005 to 2018"
-            )
+            await ctx.send("Sorry, can only be between 2005-2018")
+            return
+
+        question = random(question)
+
+        embed = discord.Embed(title="IMC-"+year, colour=0x00008B)
+        embed.set_image(url=question)
+    
+        await ctx.send(embed=embed)
 
     @commands.command(brief="Latex")
     async def latexify(self, ctx, expr: str):
@@ -81,7 +94,6 @@ class Maths(commands.Cog):
 
             file = discord.File(fp=BytesIO(bytes_img), filename="latex.png")
             await ctx.send(file=file)
-
 
 def setup(client):
     client.add_cog(Maths(client))
