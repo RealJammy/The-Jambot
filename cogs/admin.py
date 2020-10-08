@@ -43,6 +43,16 @@ class Admin(commands.Cog):
         except discord.Forbidden:
             await ctx.send("Could not ban user. Check my permissions.")
 
+    @commands.command(brief="Unbans users.", description='Do ".unban [id]"')
+    @commands.has_permissions(administrator=True)
+    async def unban(self, ctx, id: int, reason=None):
+    	try:
+    		user = await self.client.fetch_user(id)
+    		await ctx.message.guild.unban(user, reason=reason)
+    		await ctx.send(f'{user.name}#{user.discriminator} has been unbanned!')
+    	except discord.Forbidden:
+    		await ctx.send("Could not unban user. Check my permissions.")
+
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def gotosleep(self, ctx, role_id: int = 736248018139086911):
