@@ -47,9 +47,7 @@ class Admin(commands.Cog):
     @commands.has_permissions(administrator=True)
     async def unban(self, ctx, id: int, reason=None):
     	try:
-    		print(id)
     		user = await self.client.fetch_user(id)
-    		print(user)
     		await ctx.message.guild.unban(user, reason=reason)
     	except discord.Forbidden:
     		await ctx.send("Could not unban user. Check my permissions.")
