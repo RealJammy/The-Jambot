@@ -4,7 +4,7 @@ import tweepy
 from datetime import datetime, timedelta
 
 #insert with own values (OAuth 2)
-auth = tweepy.AppAuthHandler(key,secret)
+auth = tweepy.AppAuthHandler(key,secret) #insert own details
 api = tweepy.API(auth)
 
 accounts = ["jameslyne","CyberDiscUK"]
