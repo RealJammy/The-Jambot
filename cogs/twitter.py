@@ -24,5 +24,6 @@ class Twitter(commands.Cog):
                 else:
                     break
 
+     # TODO: create background process to get tweets every hour
 def setup(client):
     client.add_cog(Twitter(client))
