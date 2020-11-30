@@ -73,7 +73,7 @@ class Maths(commands.Cog):
 
         question = random(question)
 
-        embed = discord.Embed(title="IMC-"+year, colour=0x00008B)
+        embed = discord.Embed(title="SMC-"+year, colour=0x00008B)
         embed.set_image(url=question)
     
         await ctx.send(embed=embed)
