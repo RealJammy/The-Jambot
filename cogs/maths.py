@@ -97,4 +97,3 @@ class Maths(commands.Cog):
 
 def setup(client):
     client.add_cog(Maths(client))
-# uwu

@@ -20,7 +20,7 @@ class Admin(commands.Cog):
     @commands.command(
         brief="Kicks users.", description='Do ".kick @user".'
     )  # Just testing on kick first will do ban after
-    @commands.has_permissions(administrator=True)
+    @commands.has_permissions(kick_members=True)
     async def kick(self, ctx, user: discord.Member, reason=None):
         try:
             await user.kick(reason=reason)
@@ -28,18 +28,19 @@ class Admin(commands.Cog):
                 user,
                 "Damn, I'm just a lowly bot but even I think you should have been kicked :pensive:",
             )
+            await ctx.send("Kicked! yeet")
+            await user.send("you got kicked :3")
+            await user.send("Reason: ")
+            await user.send(reason=reason)
         except discord.Forbidden:
             await ctx.send("Could not kick user. Check my permissions.")
 
     @commands.command(brief="Bans users.", description='Do ".ban @user".')
-    @commands.has_permissions(administrator=True)
+    @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, user: discord.Member, reason=None):
         try:
             await user.ban(reason=reason)
-            await commands.send_message(
-                user,
-                "Damn, I'm just a lowly bot but even I think you should have been banned :pensive:",
-            )
+            await ctx.send("The ban hammer has been struck on: ", user)
         except discord.Forbidden:
             await ctx.send("Could not ban user. Check my permissions.")
 
@@ -63,6 +64,8 @@ class Admin(commands.Cog):
         ]
         text = "".join(f"<@{member.id}> " for member in awake) + "GO TO SLEEP"
         await ctx.send(text)
+        
+
 
 
 # TODO: add automated version at some point e.g. every night at ~3am it gets online users and tells em to sleep.

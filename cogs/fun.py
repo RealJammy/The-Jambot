@@ -195,6 +195,11 @@ class Fun(commands.Cog):
         user = self.client.get_user(624713824087572480)
         await user.send("aaaaaaaaaaaa go to sleep")
 
+    @commands.command(brief="To dm the creator of the bot a quick hello")
+    async def hello(self, ctx):
+        user = self.client.get_user(448519423901433876)
+        await user.send("hewwoa!")
+
     @commands.command(brief="EHF Playlist- aka an elite playlist")
     async def ehftunez(self, ctx):
         await ctx.send(
