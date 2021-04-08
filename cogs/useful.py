@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands, tasks
-from Crypto.Util.number import long_to_bytes
+from Crypto.Util.number import *
 
 
 class Useful(commands.Cog):
@@ -11,6 +11,13 @@ class Useful(commands.Cog):
     async def lb(self, ctx, arg):
         try:
             await ctx.send(long_to_bytes(int(arg)).decode().replace("@", ""))
+        except:
+            await ctx.send("Failed <:sex:736200562890113055>")
+
+    @commands.command(brief="Encode bytes to numbers")
+    async def bl(self, ctx, arg):
+        try:
+            await ctx.send(arg.from_bytes(s, arg))
         except:
             await ctx.send("Failed <:sex:736200562890113055>")
 

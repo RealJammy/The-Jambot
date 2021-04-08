@@ -108,5 +108,25 @@ class Redditstuff(commands.Cog):
         await ctx.send(embed=embed)
 
 
+    @commands.command(brief="Get a walrus.")
+    async def walrus(self, ctx):
+        subreddit = await self.reddit.subreddit("walrus")
+        submissions = []
+
+        async for submission in subreddit.hot(limit=100):
+            if not submission.stickied:
+                submissions.append(submission)
+
+        submission = random.choice(submissions)
+        comments = await submission.comments()
+        await comments.replace_more(limit=0)
+        comment = random.choice(comments).body
+
+        embed = discord.Embed(
+            title=submission.title, description=comment, colour=0xFFA500
+        )
+        embed.set_image(url=submission.url)
+        await ctx.send(embed=embed)
+
 def setup(client):
     client.add_cog(Redditstuff(client))

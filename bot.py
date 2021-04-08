@@ -15,7 +15,7 @@ with open("creds.json", "r") as creds:
 async def on_ready():
     print("The Jambot is here. Hello.")
     await client.change_presence(
-        status=discord.Status.online, activity=discord.Game("Watching over skids")
+        status=discord.Status.online, activity=discord.Game("with the on and off switch")
     )
 
 
@@ -46,4 +46,5 @@ client.load_extension("cogs.useful")
 client.load_extension("cogs.reddit")
 client.load_extension("cogs.maths")
 client.load_extension("cogs.translate")
+#client.load_extension("cogs.stocks")
 client.run(token)  # api key here :)

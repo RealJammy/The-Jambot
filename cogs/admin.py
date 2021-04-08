@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 from discord.ext.commands import has_permissions, MissingPermissions
+import time
 
 
 class Admin(commands.Cog):
@@ -39,10 +40,24 @@ class Admin(commands.Cog):
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, user: discord.Member, reason=None):
         try:
+            await ctx.send("https://tenor.com/view/blob-banned-ban-hammer-blob-ban-emoji-gif-16021044")
+            time.sleep(15.5)
+            await ctx.send("The ban hammer has been struck.")
             await user.ban(reason=reason)
-            await ctx.send("The ban hammer has been struck on: ", user)
         except discord.Forbidden:
             await ctx.send("Could not ban user. Check my permissions.")
+
+    @commands.command(brief="Bams users.", description='Do ".bam @user".')
+    @commands.has_permissions(ban_members=True)
+    async def bam(self, ctx, user: discord.Member, reason=None):
+        try:
+            await ctx.send("https://tenor.com/view/blob-banned-ban-hammer-blob-ban-emoji-gif-16021044")
+            time.sleep(15.5)
+            await ctx.send("The bam hammer has been struck.")
+            
+
+        except discord.Forbidden:
+            await ctx.send("Could not bam user. Check my permissions.")
 
     @commands.command(brief="Unbans users.", description='Do ".unban [id]"')
     @commands.has_permissions(administrator=True)
@@ -64,8 +79,19 @@ class Admin(commands.Cog):
         ]
         text = "".join(f"<@{member.id}> " for member in awake) + "GO TO SLEEP"
         await ctx.send(text)
-        
 
+    @commands.command(brief="Toggles a command on and off", description='Do ".toggle [command]"')
+    @commands.is_owner()
+    async def toggle(self, ctx, *, command):
+        command = self.client.get_command(command)
+        if command is None:
+            await ctx.send("I can't find a command with that name!")
+        elif ctx.command == command:
+            await ctx.send("You cannot disable this command.")
+        else:
+            command.enabled = not command.enabled
+            ternary = "enabled" if command.enabled else "disabled"
+            await ctx.send(f"I have {ternary} {command.qualified_name} for you :3")
 
 
 # TODO: add automated version at some point e.g. every night at ~3am it gets online users and tells em to sleep.

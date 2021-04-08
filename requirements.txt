@@ -1,4 +1,8 @@
 discord
 asyncpraw
-sympy 
+sympy
 tweepy
+pycryptodome
+TextToOwO
+googletrans
+yahoo-fin
