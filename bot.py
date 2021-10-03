@@ -39,6 +39,13 @@ async def on_command_error(ctx, error):
         await ctx.send("Conversion of arguments failed.")
     print(f"ERROR: {error}")
 
+    async def on_message(self, message):
+        if message.author == self.user:
+            return
+        
+        if message.content == "Who are the cyberists?":
+            await ctx.send("The Cyberists are the ones who created the Jambot.")
+
 
 client.load_extension("cogs.fun")
 client.load_extension("cogs.admin")
