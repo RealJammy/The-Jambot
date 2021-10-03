@@ -49,7 +49,8 @@ All commands of The Jambot are listed below in the relevant subheadings
 | reddit [subreddit] | Get a random meme from a subreddit             |
 | skid               | CD skid time owo                               | 
 | askreddit          | Get top answers for r/askreddit questions      | 
-| aita               | Get top responses from Am I The Asshole Posts. | 
+| aita               | Get top responses from Am I The Asshole Posts. |
+| walrus             | Show a walrus.                                 |
  
 ### Useful
 
@@ -57,6 +58,7 @@ All commands of The Jambot are listed below in the relevant subheadings
 | ------------ | -------------------------------- |
 | invite       | Gives a bot discord invite.      |
 | lb           | Decode a number to bytes         |
+| bl           | Encode bytes to numbers.         |
 | repo         | Gives a link to The Jambot repo. | 
 
 ### Maths
