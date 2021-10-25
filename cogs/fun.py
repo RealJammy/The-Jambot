@@ -35,7 +35,7 @@ class Fun(commands.Cog):
     async def anime(self, ctx):
         try:
             async with self.session.get(
-                "https://json.reddit.com/r/AnimeDrawings/hot/?sort=hot",
+                "https://json.reddit.com/r/AnimeDrawings/hot/?sort=controversial",
                 headers={"User-Agent": "Mozilla/5.0"},
             ) as resp:
                 data = (await resp.json())["data"]
