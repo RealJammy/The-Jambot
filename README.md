@@ -79,6 +79,7 @@ As the name implies, these are admin-only commands
 | byebye [amount to clear] | Clear messages in channel (default 5).                 | 
 | kick                     | Kicks users                                            | 
 | ban                      | Bans users                                             | 
+| bam                      | Bams users                                             |
 | gotosleep                | Ping everyone who's online at the time to go to sleep! | 
 
 ### No Category
