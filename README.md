@@ -108,3 +108,4 @@ If you make a change to the bot that ends up in its main code, you will be liste
 - [ben-sommer](https://github.com/ben-sommer)
 - [rag7](https://github.com/rag7)
 - [Owez](https://ogriffiths.com)
+- [woa](https://github.com/woaisthisgit)
