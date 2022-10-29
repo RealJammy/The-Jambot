@@ -127,11 +127,7 @@ class Fun(commands.Cog):
         except:
             await ctx.send("No koala :(")
 
-    @commands.command(brief="No anime.")
-    async def noanime(self, ctx):
-        await ctx.send(
-            "https://i.kym-cdn.com/entries/icons/original/000/027/108/anime.jpg"
-        )
+
 
     @commands.command(brief="random.")
     async def randomcmd(self, ctx):
