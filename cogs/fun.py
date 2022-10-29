@@ -135,7 +135,7 @@ class Fun(commands.Cog):
 
     @commands.command(brief="random.")
     async def randomcmd(self, ctx):
-        await ctx.send("https://www.youtube.com/watch?v=63qtYi1nwcs")
+        await ctx.send("https://www.youtube.com/watch?v=hr03xF08qoU")
 
     @commands.command(brief="Ping!")
     async def ping(self, ctx):
