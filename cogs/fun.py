@@ -153,17 +153,7 @@ class Fun(commands.Cog):
             "https://cdn.discordapp.com/attachments/509080315369881600/1035311851661181069/cheating_message.mp4"
         )
 
-    @commands.command(brief="uwu")
-    async def uwu(self, ctx):
-        await ctx.send("uwu!")
 
-    @commands.command(brief="owo")
-    async def owo(self, ctx):
-        await ctx.send("owo!")
-
-    @commands.command(brief="yeet")
-    async def yeet(self, ctx):
-        await ctx.send("hi uwu :3")
 
     @commands.command(brief="scream! Only works on PC/ Desktop.")
     async def scream(self, ctx):
