@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 import json
 
-client = commands.Bot(command_prefix=".")
+client = commands.Bot(command_prefix=".", status=discord.Status.online, activity=discord.Game("with the on and off switch"))
 client.remove_command("help")
 
 with open("creds.json", "r") as creds:
@@ -14,9 +14,6 @@ with open("creds.json", "r") as creds:
 @client.event
 async def on_ready():
     print("The Jambot is here. Hello.")
-    await client.change_presence(
-        status=discord.Status.online, activity=discord.Game("with the on and off switch")
-    )
 
 
 @client.event
