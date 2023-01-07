@@ -137,6 +137,39 @@ class Fun(commands.Cog):
     async def ping(self, ctx):
         await ctx.send(f"pong!\n{round(self.client.latency * 1000)}ms")
 
+    @commands.command(aliases=['epicgamerate', 'egr', 'epicgr', 'egrate', 'epicgamerr8', 'epicgamer8'])
+    async def epicgamerrate(self, ctx, member: discord.Member = None):
+        num = random.randint(1, 100)
+        if member is None:
+            member = ctx.author
+
+        membervar = member.display_name
+
+        embed = discord.Embed(
+            title=f"Epic Gamer Rate :sunglasses:",
+            description=f"{membervar} is {num}% epic gamer."
+        )
+        embed.color = discord.Color.random()
+        embed.set_footer(text="Gamers = Poggers")
+        await ctx.send(embed=embed)
+
+    @commands.command(aliases=['sr', 'simpr', 'srate', 'sr8'])
+    async def simprate(self, ctx, member: discord.Member = None):
+        num = random.randint(1, 100)
+        if member is None:
+            member = ctx.author
+
+        membervar = member.display_name
+
+        embed = discord.Embed(
+            title=f"Simp Rate :blush:",
+            description=f"{membervar} is {num}% simp."
+        )
+        embed.color = discord.Color.random()
+        embed.set_footer(text="Their favourite show be the SIMPsons")
+        await ctx.send(embed=embed)
+
+
     @commands.command(brief="Lyne.")
     async def lyne(self, ctx):
         await ctx.send(
